@@ -35,15 +35,95 @@ const prints = [
     },
 ];
 
+const texts = {
+    en: {
+        changeLang: 'Change language',
+        mainText1:
+            "You’ll look in the mirror and feel ",
+        mainText2:
+            "more confident, secure, and happy",
+        mainText3:
+            ", inside and out.",
+        join: '💪 Join more than 300 students on this journey of health and self-esteem.',
+        buttonMain: 'I want real results',
+        section1: 'This is for you if...',
+        wantSpot: 'I want a spot',
+        realResults: 'Real results',
+        transformBody: 'I want to transform my body',
+        seriousWork: 'SERIOUS work,',
+        works: 'A method that WORKS.',
+        workoutTips: 'Workout tips',
+        workoutDesc:
+            'Instructional videos with training tips to improve your routines.',
+        howWorks: 'How does it work?',
+        plans: 'Available Plans',
+        attention:
+            '⚠️ Attention: after completing your purchase, do not close the page. You’ll be redirected to fill out your assessment form.',
+        bestSeller: 'Best seller',
+        buyButton: 'I want this plan',
+        myNameIs: 'My name is',
+        limitedSpots: '🚨 LIMITED SPOTS',
+        limitedDesc1:
+            'Spots are limited to ensure my direct and specialized support for each client.',
+        limitedDesc2:
+            'If you really want to make a real change — not just try one more time — this is your chance.',
+        changeLife: 'I want to change my life',
+        footer: '© Bruno Duarte 2025 - All rights reserved.',
+        devBy: 'Developed by',
+    },
+    pt: {
+        changeLang: 'Mudar linguagem',
+        mainText1:
+            'Você vai se olhar no espelho e se sentir',
+        mainText2:
+            ' mais confiante, seguro(a) e feliz',
+        mainText3:
+            ', por dentro e por fora.',
+        join: '💪 Junte-se a mais de 300 alunos nessa jornada de saúde e autoestima.',
+        buttonMain: 'Quero resultados de verdade',
+        section1: 'Essa é pra você que...',
+        wantSpot: 'Quero garantir minha vaga',
+        realResults: 'Resultados reais',
+        transformBody: 'Quero transformar meu corpo',
+        seriousWork: 'TRABALHO SÉRIO,',
+        works: 'Um método que FUNCIONA.',
+        workoutTips: 'Dicas de treino',
+        workoutDesc:
+            'Vídeos instrutivos com dicas para melhorar seus treinos.',
+        howWorks: 'Como funciona?',
+        plans: 'Planos disponíveis',
+        attention:
+            '⚠️ Atenção: após finalizar sua compra, não feche a página. Você será redirecionado para preencher seu formulário de avaliação.',
+        bestSeller: 'Mais vendido',
+        buyButton: 'Quero este plano',
+        myNameIs: 'Meu nome é',
+        limitedSpots: '🚨 VAGAS LIMITADAS',
+        limitedDesc1:
+            'As vagas são limitadas para garantir meu acompanhamento direto e especializado com cada cliente.',
+        limitedDesc2:
+            'Se você realmente quer uma mudança de verdade — e não apenas tentar mais uma vez — essa é a sua chance.',
+        changeLife: 'Quero mudar minha vida',
+        footer: '© Bruno Duarte 2025 - Todos os direitos reservados.',
+        devBy: 'Desenvolvido por',
+    },
+};
+
 function Home() {
+    const [language, setLanguage] = useState('en');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentIndex2, setCurrentIndex2] = useState(0);
     const [currentVideo, setCurrentVideo] = useState(0);
     const touchStartX = useRef(null);
     const planosRef = useRef(null);
 
+    const t = texts[language];
+
     const scrollToPlanos = () => {
         planosRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    const toggleLanguage = () => {
+        setLanguage((prev) => (prev === 'en' ? 'pt' : 'en'));
     };
 
     const videos = [
@@ -101,13 +181,53 @@ function Home() {
                         <img src='./imagens/whatsapp.svg' className='w-[40px]' />
                     </div>
                 </a>
+                <div
+                    onClick={toggleLanguage}
+                    className="fixed z-50 bottom-2 left-2 cursor-pointer"
+                >
+                    <div className="relative w-[84px] h-[43px] bg-neutral-700 rounded-lg flex items-center p-1 transition-all duration-200 shadow-lg">
+                        {/* Bandeira de fundo esquerda */}
+                        <img
+                            src="/imagens/eua.png"
+                            alt="Português"
+                            className="absolute left-2 w-[27px] h-[22px] object-cover"
+                        />
+
+                        {/* Bandeira de fundo direita */}
+                        <img
+                            src="/imagens/brasil.png"
+                            alt="English"
+                            className="absolute right-2 w-[27px] h-[22px] object-cover"
+                        />
+
+                        {/* Bolinha deslizante */}
+                        <div
+                            className={`absolute ${language === "pt" ? "left-[42px]" : "left-[5px]"
+                                } w-[36px] h-[32px] bg-bgreen rounded flex items-center justify-center shadow-md transition-all duration-300`}
+                        >
+                            {language === "pt" ? (
+                                <img
+                                    src="/imagens/brasil.png"
+                                    alt="Português"
+                                    className="w-[27px] h-[20px] object-cover"
+                                />
+                            ) : (
+                                <img
+                                    src="/imagens/eua.png"
+                                    alt="English"
+                                    className="w-[27px] h-[20px] object-cover"
+                                />
+                            )}
+                        </div>
+                    </div>
+                </div>
 
                 <div className='text-white flex justify-center'>
                     <div className='text-center p-3 z-10 relative mt-2'>
                         <div className='flex justify-center left-[15px]'>
                             <img src='./imagens/logo.png' className='w-[130px]' />
                         </div>
-                        <p className='text-[21px] font-psemibold mt-5'>You’ll look in the mirror and feel <span className='text-bgreen'>more confident, secure, and happy</span>, inside and out.</p>
+                        <p className='text-[21px] font-psemibold mt-5'>{t.mainText1} <span className='text-bgreen'>{t.mainText2}</span>{t.mainText3}</p>
                         <div className='flex justify-center mt-7'>
                             <video
                                 className="bg-neutral-900 rounded-lg w-[900px] border border-neutral-600"
@@ -117,19 +237,19 @@ function Home() {
                                 playsInline
                             />
                         </div>
-                        <p className='mt-7'>💪 Join more than 300 students on this journey of health and self-esteem.</p>
+                        <p className='mt-7'>{t.join}</p>
                     </div>
                 </div>
 
                 <div className='text-center mt-4'>
                     <button
                         onClick={scrollToPlanos}
-                        className='buttonHover bg-verde p-3 w-[80%] max-w-[400px] rounded-[8px] text-black text-[18px] font-medium'>I want real results</button>
+                        className='buttonHover bg-verde p-3 w-[80%] max-w-[400px] rounded-[8px] text-black text-[18px] font-medium'>{t.buttonMain}</button>
                 </div>
 
                 <div className='space-y-12 text-white p-3 mt-10'>
                     <div>
-                        <p className='text-[26px] font-medium text-center'>This is for you if...</p>
+                        <p className='text-[26px] font-medium text-center'>{t.section1}</p>
                         <div className='flex justify-center max-w-[600px] mx-auto'>
                             <div className='mt-5 space-y-4 border border-neutral-700 p-4 rounded-[16px] text-white'>
                                 <div className='flex items-center space-x-2'>
