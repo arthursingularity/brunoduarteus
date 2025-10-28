@@ -82,7 +82,7 @@ const texts = {
         join: '💪 Junte-se a mais de 300 alunos nessa jornada de saúde e autoestima.',
         buttonMain: 'Quero resultados de verdade',
         section1: 'Essa é pra você que...',
-        wantSpot: 'Quero garantir minha vaga',
+        wantSpot: 'Quero uma vaga',
         realResults: 'Resultados reais',
         transformBody: 'Quero transformar meu corpo',
         seriousWork: 'TRABALHO SÉRIO,',
@@ -293,7 +293,7 @@ function Home() {
                                 onClick={scrollToPlanos}
                                 className='buttonHover bg-verde p-3 w-[80%] max-w-[400px] rounded-[8px] text-black text-[18px] font-medium'
                             >
-                                I want a spot
+                                {t.wantSpot}
                             </button>
                         </div>
                     </div>
@@ -338,7 +338,7 @@ function Home() {
                                     onClick={scrollToPlanos}
                                     className='buttonHover bg-verde p-3 w-[80%] max-w-[400px] rounded-[8px] text-black text-[18px] font-medium'
                                 >
-                                    I want to transform my body
+                                    {t.transformBody}
                                 </button>
                             </div>
                         </div>
