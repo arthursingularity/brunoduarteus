@@ -47,29 +47,80 @@ const texts = {
         join: '💪 Join more than 300 students on this journey of health and self-esteem.',
         buttonMain: 'I want real results',
         section1: 'This is for you if...',
+        sectionTxt1: 'Want to lose weight or get toned',
+        sectionTxt12: 'without starving',
+        sectionTxt13: 'or gain muscle',
+        sectionTxt14: 'without overeating.',
+        sectionTxt2: 'Want a',
+        sectionTxt22: 'more beautiful',
+        sectionTxt23: 'body, but also',
+        sectionTxt24: 'healthier and stronger.',
+        sectionTxt3: 'Already train but',
+        sectionTxt32: 'stopped progressing.',
+        sectionTxt4: 'Tried on your own',
+        sectionTxt42: ', but couldn’t maintain the results.',
+        sectionTxt5: 'Tired of',
+        sectionTxt52: 'generic workouts',
+        sectionTxt53: 'that don’t work for you.',
+        sectionTxt6: 'Need someone to',
+        sectionTxt62: 'truly guide you',
+        sectionTxt63: ', step by step.',
+        sectionTxt7: 'Want to build healthy habits',
+        sectionTxt72: 'even with a busy routine.',
         wantSpot: 'I want a spot',
-        realResults: 'Real results',
+        realResults1: 'Real',
+        realResults2: 'results',
+        realResults3: 'from my students',
         transformBody: 'I want to transform my body',
         seriousWork: 'SERIOUS work,',
-        works: 'A method that WORKS.',
+        works: 'a method that WORKS.',
+        conversations: 'Real conversations',
+        maximize: 'Maximize your results',
         workoutTips: 'Workout tips',
         workoutDesc:
             'Instructional videos with training tips to improve your routines.',
         howWorks: 'How does it work?',
         plans: 'Available Plans',
-        attention:
-            '⚠️ Attention: after completing your purchase, do not close the page. You’ll be redirected to fill out your assessment form.',
+        attention1:
+            '⚠️ Attention:',
+        attention2:
+            'after completing your purchase,',
+        attention3:
+            'do not close the page.',
+        attention4:
+            'You’ll be redirected to fill out your assessment form.',
         bestSeller: 'Best seller',
         buyButton: 'I want this plan',
         myNameIs: 'My name is',
+        brunodesc1: 'I’m a Personal Trainer with over',
+        brunodesc12: '15 years of experience',
+        brunodesc13: ', helping hundreds of women achieve the body of their dreams with health, focus, and discipline.',
+        brunoDesc2: 'Graduated in Physical Education and specialized in strength training, weight loss, and high performance, my commitment is to turn results into a lifestyle.',
+        brunoDesc31: 'I’ve coached hundreds of people, even with busy schedules, and witnessed firsthand the power of consistency with the',
+        brunoDesc32: 'right guidance.',
         limitedSpots: '🚨 LIMITED SPOTS',
         limitedDesc1:
-            'Spots are limited to ensure my direct and specialized support for each client.',
+            'Spots are limited to ensure my',
+        limitedDesc12:
+            'direct and specialized support for each client.',
         limitedDesc2:
-            'If you really want to make a real change — not just try one more time — this is your chance.',
+            'If you really want to',
+        limitedDesc21:
+            'make a real change',
+        limitedDesc22:
+            '— not just try one more time — this is your chance.',
+        limitedDesc3:
+            'Click the button below and start building your best version today 👇',
         changeLife: 'I want to change my life',
         footer: '© Bruno Duarte 2025 - All rights reserved.',
         devBy: 'Developed by',
+        analysis: 'Analysis',
+        analysisDesc: 'After confirming payment, you’ll receive a detailed form to describe your routine, training level, food preferences, available schedule, injuries...',
+        creatingPlan: 'Creating your plan',
+        creatingPlanDesc: 'Based on your information, your plan will be built from scratch. You’ll receive your training and diet protocol within 5 business days.',
+        Followup: 'Follow-up',
+        FollowupDesc: 'Every week your plan will be reviewed. Adjustments will be made as needed — whether due to your feedback (difficulty, schedule change, etc.) or a strategy from me to speed up your progress.',
+        Followup: 'Follow-up',
     },
     pt: {
         changeLang: 'Mudar linguagem',
@@ -82,29 +133,79 @@ const texts = {
         join: '💪 Junte-se a mais de 300 alunos nessa jornada de saúde e autoestima.',
         buttonMain: 'Quero resultados de verdade',
         section1: 'Essa é pra você que...',
+        sectionTxt1: 'Quer emagrecer ou definir',
+        sectionTxt12: 'sem passar fome',
+        sectionTxt13: 'ou ganhar massa muscular',
+        sectionTxt14: 'sem comer demais.',
+        sectionTxt2: 'Quer um corpo mais',
+        sectionTxt22: 'bonito',
+        sectionTxt23: ', mas também mais',
+        sectionTxt24: 'saudável e forte.',
+        sectionTxt3: 'Já treina, mas',
+        sectionTxt32: 'parou de evoluir.',
+        sectionTxt4: 'Já tentou sozinho(a)',
+        sectionTxt42: ', mas não conseguiu manter os resultados.',
+        sectionTxt5: 'Está cansado(a) de',
+        sectionTxt52: 'treinos prontos e genéricos',
+        sectionTxt53: 'que não funcionam pra você.',
+        sectionTxt6: 'Precisa de alguém que te',
+        sectionTxt62: 'acompanhe de verdade',
+        sectionTxt63: ', passo a passo.',
+        sectionTxt7: 'Quer criar hábitos saudáveis',
+        sectionTxt72: 'mesmo com a rotina puxada.',
         wantSpot: 'Quero uma vaga',
-        realResults: 'Resultados reais',
+        realResults1: 'Resultados',
+        realResults2: 'Reais',
+        realResults3: 'dos meus aluno(a)s',
         transformBody: 'Quero transformar meu corpo',
-        seriousWork: 'TRABALHO SÉRIO,',
-        works: 'Um método que FUNCIONA.',
+        seriousWork: 'trabalho SÉRIO,',
+        works: 'método que FUNCIONA.',
+        conversations: 'Conversas reais',
+        maximize: 'Maximize os seus resultados',
         workoutTips: 'Dicas de treino',
         workoutDesc:
             'Vídeos instrutivos com dicas para melhorar seus treinos.',
         howWorks: 'Como funciona?',
         plans: 'Planos disponíveis',
-        attention:
-            '⚠️ Atenção: após finalizar sua compra, não feche a página. Você será redirecionado para preencher seu formulário de avaliação.',
+        attention1:
+            '⚠️ Atenção:',
+        attention2:
+            'após finalizar a compra,',
+        attention3:
+            'não feche a página.',
+        attention4:
+            'Você será redirecionado(a) para responder a anamnese.',
         bestSeller: 'Mais vendido',
         buyButton: 'Quero este plano',
         myNameIs: 'Meu nome é',
-        limitedSpots: '🚨 VAGAS LIMITADAS',
+        brunodesc1: 'Sou Personal Trainer com mais de',
+        brunodesc12: '15 anos de experiência',
+        brunodesc13: ', ajudando centenas de mulheres a conquistarem o corpo dos seus sonhos com saúde, foco e disciplina.',
+        brunoDesc2: 'Graduado em Educação Física e especialista em musculação, emagrecimento e alta performance, meu compromisso é transformar resultados em estilo de vida.',
+        brunoDesc31: 'Já acompanhei centenas de pessoas, mesmo com rotinas apertadas, e vi de perto o poder da consistência com o',
+        brunoDesc32: 'acompanhamento certo.',
+        limitedSpots: '🚨 POUCAS VAGAS',
         limitedDesc1:
-            'As vagas são limitadas para garantir meu acompanhamento direto e especializado com cada cliente.',
+            'As vagas são limitadas pra garantir meu acompanhamento',
+        limitedDesc12:
+            'direto e especializado com cada aluno.',
         limitedDesc2:
-            'Se você realmente quer uma mudança de verdade — e não apenas tentar mais uma vez — essa é a sua chance.',
-        changeLife: 'Quero mudar minha vida',
+            'Se você quer',
+        limitedDesc21:
+            'mudar de verdade',
+        limitedDesc22:
+            ', e não só tentar mais uma vez, agora é a sua chance.',
+        limitedDesc3:
+            'Clique no botão abaixo e comece hoje a construção da sua melhor versão 👇',
+        changeLife: 'Quero mudar de vida',
         footer: '© Bruno Duarte 2025 - Todos os direitos reservados.',
         devBy: 'Desenvolvido por',
+        analysis: 'Análise',
+        analysisDesc: 'Após a confirmação do pagamento, você receberá um formulário detalhado onde irá descrever sua rotina, nível de treinamento, preferências alimentares, horários disponíveis, lesões e fotos do seu físico atual.',
+        creatingPlan: 'Montagem do seu plano',
+        creatingPlanDesc: 'Com base nas informações recebidas, seu plano será estruturado do zero. Você receberá seu protocolo de dieta e treino em até 5 dias úteis.',
+        Followup: 'Acompanhamento',
+        FollowupDesc: 'Toda semana seu plano será avaliado. Ajustes serão feitos conforme necessidade: seja por uma demanda sua (dificuldade de seguir, mudança de rotina etc.) ou por uma estratégia minha para acelerar seus resultados.'
     },
 };
 
@@ -230,9 +331,9 @@ function Home() {
                         <p className='text-[21px] font-psemibold mt-5'>{t.mainText1} <span className='text-bgreen'>{t.mainText2}</span>{t.mainText3}</p>
                         <div className='flex justify-center mt-7'>
                             <video
-                                className="bg-neutral-900 rounded-lg w-[900px] border border-neutral-600"
-                                src="https://res.cloudinary.com/dsgkc7epl/video/upload/v1761693312/28-10-25_v%C3%ADdeo_final_nfcfnb.mp4"
-                                poster="./imagens/thumb.JPEG"
+                                className="bg-neutral-900 rounded-lg w-[400px] border border-neutral-600"
+                                src="https://res.cloudinary.com/dwyufgknr/video/upload/v1761871423/ENGLISH_VIDEO_e7x5xz.mp4"
+                                poster="./imagens/thumb2.png"
                                 controls
                                 playsInline
                             />
@@ -254,37 +355,37 @@ function Home() {
                             <div className='mt-5 space-y-4 border border-neutral-700 p-4 rounded-[16px] text-white'>
                                 <div className='flex items-center space-x-2'>
                                     <img className="w-[40px]" src="./imagens/check.png" />
-                                    <p className='leading-[20px]'>Want to lose weight or get toned <span className='font-regular text-bgreen'>without starving</span> or gain muscle <span className='font-regular text-bgreen'>without overeating.</span></p>
+                                    <p className='leading-[20px]'>{t.sectionTxt1} <span className='font-regular text-bgreen'>{t.sectionTxt12}</span> {t.sectionTxt13} <span className='font-regular text-bgreen'>{t.sectionTxt14}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
                                     <img className="w-[40px]" src="./imagens/check.png" />
-                                    <p className='leading-[20px]'>Want a <span className='font-regular text-bgreen'>more beautiful </span>body, but also <span className='font-regular text-bgreen'>healthier and stronger.</span></p>
+                                    <p className='leading-[20px]'>{t.sectionTxt2} <span className='font-regular text-bgreen'>{t.sectionTxt22} </span>{t.sectionTxt23} <span className='font-regular text-bgreen'>{t.sectionTxt24}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
                                     <img className="w-[40px]" src="./imagens/check.png" />
-                                    <p className='leading-[20px]'>Already train but <span className='font-regular text-bgreen'>stopped progressing.</span></p>
+                                    <p className='leading-[20px]'>{t.sectionTxt3} <span className='font-regular text-bgreen'>{t.sectionTxt32}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
                                     <img className="w-[40px]" src="./imagens/check.png" />
-                                    <p className='leading-[20px]'><span className='font-regular text-bgreen'>Tried on your own</span>, but couldn’t maintain the results.</p>
+                                    <p className='leading-[20px]'><span className='font-regular text-bgreen'>{t.sectionTxt4}</span>{t.sectionTxt42}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
                                     <img className="w-[40px]" src="./imagens/check.png" />
-                                    <p className='leading-[20px]'>Tired of <span className='font-regular text-bgreen'>generic workouts</span> that don’t work for you.</p>
+                                    <p className='leading-[20px]'>{t.sectionTxt5} <span className='font-regular text-bgreen'>{t.sectionTxt52}</span> {t.sectionTxt53}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
                                     <img className="w-[40px]" src="./imagens/check.png" />
-                                    <p className='leading-[20px]'>Need someone to <span className='font-regular text-bgreen'>truly guide you</span>, step by step.</p>
+                                    <p className='leading-[20px]'>{t.sectionTxt6} <span className='font-regular text-bgreen'>{t.sectionTxt62}</span>{t.sectionTxt63}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
                                     <img className="w-[40px]" src="./imagens/check.png" />
-                                    <p className='leading-[20px]'>Want to build healthy habits <span className='font-regular text-bgreen'>even with a busy routine.</span></p>
+                                    <p className='leading-[20px]'>{t.sectionTxt7} <span className='font-regular text-bgreen'>{t.sectionTxt72}</span></p>
                                 </div>
                             </div>
                         </div>
@@ -301,9 +402,9 @@ function Home() {
                     <div className="flex justify-center">
                         <div className="DivAntesDepois text-center mt-10 relative rounded-[16px] bg-neutral-800 max-w-[600px] mx-auto">
                             <p className="text-[30px] font-medium -mb-2 pt-5 text-white">
-                                Real <span className="text-bgreen">results</span>
+                                {t.realResults1} <span className="text-bgreen">{t.realResults2}</span>
                             </p>
-                            <p className="text-[26.5px] font-light mb-4 text-white">from my students</p>
+                            <p className="text-[26.5px] font-light mb-4 text-white">{t.realResults3}</p>
 
                             <div className="relative flex items-center justify-center">
                                 {/* Botão voltar */}
@@ -346,11 +447,11 @@ function Home() {
 
                     <div className='pb-8'>
                         <div className='leading-[30px]'>
-                            <p className='text-[32px] font-medium text-bgreen text-center'>SERIOUS work,</p>
-                            <p className='text-[21px] text-center'>A method that <span className='font-medium'>WORKS.</span></p>
+                            <p className='text-[32px] font-medium text-bgreen text-center'>{t.seriousWork}</p>
+                            <p className='text-[21px] text-center'>{t.works}</p>
                         </div>
                         <div className='text-center relative bg-neutral-800 rounded-[16px] overflow-hidden p-3 mt-8 max-w-[400px] mx-auto xl:max-w-[700px]'>
-                            <p className="text-[25px] mt-2">Real <span className='font-medium text-bgreen'>conversations</span></p>
+                            <p className="text-[25px] mt-2">{t.conversations}</p>
                             <div className='bg-neutral-700 relative rounded-[8px] p-2 mx-auto mt-5'>
                                 <div className='flex justify-center space-x-2 mt-0 relative'>
                                     <div className='w-full border border-neutral-500 rounded-[6px] relative overflow-hidden'>
@@ -423,7 +524,7 @@ function Home() {
                     </div>
 
                     <div>
-                        <p className='text-[28px] font-medium text-center leading-[31px]'>Maximize your results</p>
+                        <p className='text-[28px] font-medium text-center leading-[31px]'>{t.maximize}</p>
                         <div
                             className='max-w-[350px] h-[430px] mx-auto overflow-hidden relative mt-6 rounded-[16px] border border-neutral-600'
                             onTouchStart={handleTouchStart}
@@ -443,8 +544,8 @@ function Home() {
                                 ))}
                                 <div className='absolute z-10 bottom-0 w-full p-3'>
                                     <div className='space-y-1'>
-                                        <p className='font-medium text-[24px] text-bgreen'>Workout tips</p>
-                                        <p className='leading-[20px] text-neutral-300'>Instructional videos with training tips to improve your routines.</p>
+                                        <p className='font-medium text-[24px] text-bgreen'>{t.workoutTips}</p>
+                                        <p className='leading-[20px] text-neutral-300'>{t.workoutDesc}</p>
                                     </div>
                                     <div className='barrinha flex justify-center mt-3'>
                                         <div className='h-[15px] p-1.5 px-10 bg-bgreen rounded-full flex justify-center items-center space-x-1.5'>
@@ -465,52 +566,52 @@ function Home() {
                     </div>
 
                     <div>
-                        <p className='text-[28px] font-medium text-center'>How does it work?</p>
+                        <p className='text-[28px] font-medium text-center'>{t.howWorks}</p>
                         <div className='mt-6 flex space-x-3 justify-center'>
                             <div className='space-y-4 max-w-[500px]'>
                                 <div className='text-[15px] p-4 space-y-3 bg-neutral-800 rounded-[16px] border border-neutral-600'>
                                     <p className='text-[20px] font-medium text-black bg-bgreen w-[30px] h-[30px] rounded-[8px] flex items-center justify-center'>1</p>
-                                    <p className='text-[23px] font-medium text-bgreen'>Analysis</p>
-                                    <p className='text-neutral-200'>After confirming payment, you’ll receive a detailed form to describe your routine, training level, food preferences, available schedule, injuries...</p>
+                                    <p className='text-[23px] font-medium text-bgreen'>{t.analysis}</p>
+                                    <p className='text-neutral-200'>{t.analysisDesc}</p>
                                 </div>
 
                                 <div className='text-[15px] p-4 space-y-3 bg-neutral-800 rounded-[16px] border border-neutral-600'>
                                     <p className='text-[20px] font-medium text-black bg-bgreen w-[30px] h-[30px] rounded-[8px] flex items-center justify-center'>2</p>
-                                    <p className='text-[23px] font-medium text-bgreen leading-[29px]'>Creating your plan</p>
-                                    <p className='text-neutral-200'>Based on your information, your plan will be built from scratch. You’ll receive your training and diet protocol within 5 business days.</p>
+                                    <p className='text-[23px] font-medium text-bgreen leading-[29px]'>{t.creatingPlan}</p>
+                                    <p className='text-neutral-200'>{t.creatingPlanDesc}</p>
                                 </div>
 
                                 <div className='text-[15px] p-4 space-y-3 bg-neutral-800 rounded-[16px] border border-neutral-600'>
                                     <p className='text-[20px] font-medium text-black bg-bgreen w-[30px] h-[30px] rounded-[8px] flex items-center justify-center'>3</p>
-                                    <p className='text-[23px] font-medium text-bgreen'>Follow-up</p>
-                                    <p className='text-neutral-200'>Every week your plan will be reviewed. Adjustments will be made as needed — whether due to your feedback (difficulty, schedule change, etc.) or a strategy from me to speed up your progress.</p>
+                                    <p className='text-[23px] font-medium text-bgreen'>{t.Followup}</p>
+                                    <p className='text-neutral-200'>{t.FollowupDesc}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div ref={planosRef} className="text-center relative">
-                        <p className='text-[30px] font-medium text-center pb-4'>Available Plans</p>
+                        <p className='text-[30px] font-medium text-center pb-4'>{t.plans}</p>
                         <hr className='border-1 border-neutral-700' />
                         <p className="text-[18px] font-light mt-4 mb-4">
-                            <span className="text-yellow-400 font-medium">⚠️ Attention:</span> after completing your purchase, <span className="font-medium text-red-500">do not close the page.</span> You’ll be redirected to fill out your assessment form.
+                            <span className="text-yellow-400 font-medium">{t.attention1}</span> {t.attention2} <span className="font-medium text-red-500">{t.attention3}</span> {t.attention4}
                         </p>
                         <hr className='border-1 border-neutral-700' />
                         <div className='space-y-4 mt-6 lg:flex lg:space-x-4 lg:justify-center lg:space-y-0'>
                             <div className='border p-2 border-bgreen bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
                                 <div className='bg-bgreen rounded-[8px] p-2 space-y-2 text-black'>
                                     <div className='flex justify-between'>
-                                        <p className='text-[21px] font-medium pl-1'>Month</p>
-                                        <p className='bg-neutral-700 text-white rounded-[6px] font-regular flex justify-center items-center h-[26px] px-2 text-[11px]'>Best seller</p>
+                                        <p className='text-[21px] font-medium pl-1'>Annual</p>
+                                        <p className='bg-neutral-700 text-white rounded-[6px] font-regular flex justify-center items-center h-[26px] px-2 text-[11px]'>{t.bestSeller}</p>
                                     </div>
-                                    <p className='font-medium text-[27px] text-left ml-1'>$35 <span className='text-[17px] font-regular'>/month</span></p>
+                                    <p className='font-medium text-[27px] text-left ml-1'>$30,90 <span className='text-[17px] font-regular'>/month</span></p>
                                     <div className='text-center pt-3 text-white'>
                                         <a
-                                            href="https://buy.stripe.com/aFa00ifnF7dzda6bMEfQI0E"
+                                            href="https://buy.stripe.com/fZuaEWcbteG16LI5ogfQI0Q"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <button className='buttonHover font-medium bg-neutral-600 p-3 w-full rounded-[6px] text-[18px]'>I want this plan</button>
+                                            <button className='buttonHover font-medium bg-neutral-600 p-3 w-full rounded-[6px] text-[18px] text-verde'>{t.buyButton}</button>
                                         </a>
                                     </div>
                                 </div>
@@ -545,10 +646,106 @@ function Home() {
                                         <p className='leading-[20px]'>Complete e-book according to your goal</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
+                                    <p className="font-extralight text-[12.5px] text-neutral-100 pb-1 text-center">Em planos anual e semestral, o cancelamento antecipado está sujeito à taxa correspondente a uma mensalidade.</p>
+                                </div>
+                            </div>
+                            <div className='p-2 bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
+                                <div className='bg-neutral-700 rounded-[8px] p-2 space-y-2'>
+                                    <div className='flex justify-between'>
+                                        <p className='text-[21px] font-medium pl-1'>Six Month</p>
+                                    </div>
+                                    <p className='font-medium text-[27px] text-left ml-1'>$35,90 <span className='text-[17px] font-regular text-neutral-300'>/month</span></p>
+                                    <div className='text-center pt-3'>
+                                        <a
+                                            href="https://buy.stripe.com/4gMdR81wP9lH2vsdUMfQI0O"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <button className='buttonHover font-medium bg-verde text-black p-3 w-full rounded-[6px] text-[18px]'>{t.buyButton}</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='space-y-2 p-3 text-neutral-200 text-left'>
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" />
-                                        <p className='leading-[20px]'>Access to VIP group – Team Bruno Duarte</p>
+                                        <p className='leading-[20px]'>App de acesso aos treinos</p>
                                     </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>Planilha personalizada de Treinos</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>Vídeos dos exercícios</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'><span className="font-medium text-white">4 treinos</span> trocados a cada 45 dias</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>Suporte diretamente comigo via whatsapp.</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>E-book completo de acordo com o seu objetivo</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                </div>
+                                <p className="font-extralight text-[12.5px] text-neutral-100 pb-1">Em planos anual e semestral, o cancelamento antecipado está sujeito à taxa correspondente a uma mensalidade.</p>
+                            </div>
+                            <div className='p-2 bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
+                                <div className='bg-neutral-700 rounded-[8px] p-2 space-y-2'>
+                                    <div className='flex justify-between'>
+                                        <p className='text-[21px] font-medium pl-1'>Three month</p>
+                                    </div>
+                                    <p className='font-medium text-[27px] text-left ml-1'>$42,90 <span className='text-[17px] font-regular text-neutral-300'>/month</span></p>
+                                    <div className='text-center pt-3'>
+                                        <a
+                                            href="https://buy.stripe.com/8x2dR8b7p7dzeea6skfQI0R"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <button className='buttonHover font-medium bg-verde text-black p-3 w-full rounded-[6px] text-[18px]'>{t.buyButton}</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='space-y-2 p-3 text-neutral-200 text-left'>
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>App de acesso aos treinos</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>Planilha personalizada de Treinos</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>Vídeos dos exercícios</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>2 treinos trocados a cada 45 dias</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <p className='leading-[20px]'>Suporte diretamente comigo via whatsapp.</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
+                                    <div className='flex items-center space-x-2'>
+                                        <img className="w-[30px]" src="./imagens/close.png" />
+                                        <p className='leading-[20px]'>E-book completo de acordo com o seu objetivo</p>
+                                    </div>
+                                    <hr className='border-1 border-neutral-700' />
                                 </div>
                             </div>
                         </div>
@@ -566,13 +763,13 @@ function Home() {
                                 </div>
                                 <div className='xl:max-w-[600px] max-w-[400px]'>
                                     <div className='leading-[31px] mt-7'>
-                                        <p className='text-[22px]'>My name is</p>
+                                        <p className='text-[22px]'>{t.myNameIs}</p>
                                         <p className='text-[28px] text-bgreen font-bold'>BRUNO DUARTE</p>
                                     </div>
                                     <div className='mt-7 space-y-5 text-neutral-200'>
-                                        <p>I’m a Personal Trainer with over <span className='text-bgreen font-psemibold'>15 years of experience</span>, helping hundreds of women achieve the body of their dreams with health, focus, and discipline.</p>
-                                        <p>Graduated in Physical Education and specialized in strength training, weight loss, and high performance, my commitment is to turn results into a lifestyle.</p>
-                                        <p>I’ve coached hundreds of people, even with busy schedules, and witnessed firsthand the power of consistency with the <span className='font-psemibold text-white'>right guidance.</span></p>
+                                        <p>{t.brunodesc1} <span className='text-bgreen font-psemibold'>{t.brunodesc12}</span>{t.brunodesc13}</p>
+                                        <p>{t.brunoDesc2}</p>
+                                        <p>{t.brunoDesc31} <span className='font-psemibold text-white'>{t.brunoDesc32}</span></p>
                                     </div>
                                     <div className='flex space-x-3 mt-7 pb-5'>
                                         <a href="https://www.instagram.com/brunoduartepersonal" target="_blank" rel="noopener noreferrer">
@@ -594,17 +791,17 @@ function Home() {
 
                 <div className='pb-2 bg-red-600'>
                     <div className='p-5 text-center text-white'>
-                        <p className='text-[29px] font-bold'>🚨 LIMITED SPOTS</p>
+                        <p className='text-[29px] font-bold'>{t.limitedSpots}</p>
                         <div className='space-y-5 mt-4 max-w-[400px] mx-auto'>
-                            <p>Spots are limited to ensure my <span className='font-psemibold'>direct and specialized support for each client.</span></p>
-                            <p>If you really want to <span className='font-psemibold'>make a real change</span> — not just try one more time — this is your chance.</p>
-                            <p>Click the button below and start building your best version today 👇</p>
+                            <p>{t.limitedDesc1} <span className='font-psemibold'>{t.limitedDesc12}</span></p>
+                            <p>{t.limitedDesc2} <span className='font-psemibold'>{t.limitedDesc21}</span>{t.limitedDesc22}</p>
+                            <p>{t.limitedDesc3}</p>
                         </div>
                         <div className='text-center mt-6'>
                             <button
                                 onClick={scrollToPlanos}
                                 className='buttonHover bg-verde p-4 w-full rounded-[8px] max-w-[400px] text-black text-[20px] font-psemibold'
-                            >I want to change my life
+                            >{t.changeLife}
                             </button>
                         </div>
                     </div>
@@ -613,14 +810,14 @@ function Home() {
                     <div className='flex justify-center'>
                         <img src='./imagens/logo.png' className='w-[100px]' />
                     </div>
-                    <p className='text-[15px]'>© Bruno Duarte 2025 - All rights reserved.</p>
+                    <p className='text-[15px]'>{t.footer}</p>
                     <hr className='border-1 border-neutral-700 max-w-[700px] mx-auto pb-4' />
                     <a
                         href="https://wa.me/5522988223766"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <p className='text-[13px] buttonHover'>Developed by <span className='font-medium'>Arthur Alves</span></p>
+                        <p className='text-[13px] buttonHover'>{t.devBy} <span className='font-medium'>Arthur Alves</span></p>
                     </a>
                 </div>
             </div>
