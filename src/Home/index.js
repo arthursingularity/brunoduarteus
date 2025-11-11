@@ -1,4 +1,4 @@
-import { useState, useRef, React } from 'react';
+import { useState, useRef, React, useMemo, useEffect } from 'react';
 
 const slides = [
     { nome: 'foto1', img: '/imagens/foto1.jpeg' },
@@ -33,6 +33,23 @@ const prints = [
         nome: 'p5',
         print: '/imagens/print5.jpeg',
     },
+    {
+        nome: 'p6',
+        print: '/imagens/print6.jpeg',
+    },
+    {
+        nome: 'p7',
+        print: '/imagens/print7.jpeg',
+    },
+    {
+        nome: 'p8',
+        print: '/imagens/print8.jpeg',
+    },
+    {
+        nome: 'p9',
+        print: '/imagens/print9.jpeg',
+    },
+
 ];
 
 const texts = {
@@ -75,6 +92,16 @@ const texts = {
         seriousWork: 'SERIOUS work,',
         works: 'a method that WORKS.',
         conversations: 'Real conversations',
+        cardTitle1: 'It’s not just',
+        cardTitle2: 'a workout.',
+        cardText1: 'It’s a',
+        cardText12: 'real plan',
+        cardText2: 'that will',
+        cardText22: 'change your life.',
+        cardText3: '100% personalized training for your routine and goals.',
+        cardText4: 'Practical nutrition tips based on your preferences.',
+        cardText5: 'App with videos, instructions, and monthly updates.',
+        cardText6: 'Direct follow-up with me via WhatsApp.',
         maximize: 'Maximize your results',
         workoutTips: 'Workout tips',
         workoutDesc:
@@ -161,6 +188,16 @@ const texts = {
         seriousWork: 'trabalho SÉRIO,',
         works: 'método que FUNCIONA.',
         conversations: 'Conversas reais',
+        cardTitle1: 'Não é apenas',
+        cardTitle2: 'um treino.',
+        cardText1: 'É um plano',
+        cardText12: 'de verdade',
+        cardText2: 'que vai',
+        cardText22: 'mudar a sua vida.',
+        cardText3: 'Treino 100% personalizado para a sua rotina e objetivo.',
+        cardText4: 'Dicas práticas de alimentação de acordo com as suas preferências.',
+        cardText5: 'App com vídeos, instruções e atualizações mensais.',
+        cardText6: 'Acompanhamento direto comigo via WhatsApp.',
         maximize: 'Maximize os seus resultados',
         workoutTips: 'Dicas de treino',
         workoutDesc:
@@ -251,6 +288,17 @@ function Home() {
         touchStartX.current = null;
     };
 
+    const current = slides[currentIndex];
+    const printsToShow = useMemo(() => {
+        // slice(5,9) => índices 5,6,7,8 => p6..p9
+        return language === 'en' ? prints.slice(5, 9) : prints.slice(0, 5);
+    }, [language]);
+    const current2 = printsToShow[currentIndex2 % printsToShow.length];
+
+    useEffect(() => {
+        setCurrentIndex2(0);
+    }, [language]);
+
     const nextSlide = () => {
         setCurrentIndex((prev) => (prev + 1) % slides.length);
     };
@@ -260,15 +308,16 @@ function Home() {
     };
 
     const nextSlide2 = () => {
-        setCurrentIndex2((prev) => (prev + 1) % prints.length);
+        if (!printsToShow.length) return;
+        setCurrentIndex2((prev) => (prev + 1) % printsToShow.length);
     };
 
     const prevSlide2 = () => {
-        setCurrentIndex2((prev) => (prev - 1 + prints.length) % prints.length);
+        if (!printsToShow.length) return;
+        setCurrentIndex2((prev) =>
+            (prev - 1 + printsToShow.length) % printsToShow.length
+        );
     };
-
-    const current = slides[currentIndex];
-    const current2 = prints[currentIndex2];
 
     return (
         <div>
@@ -331,8 +380,13 @@ function Home() {
                         <p className='text-[21px] font-psemibold mt-5'>{t.mainText1} <span className='text-bgreen'>{t.mainText2}</span>{t.mainText3}</p>
                         <div className='flex justify-center mt-7'>
                             <video
-                                className="bg-neutral-900 rounded-lg w-[400px] border border-neutral-600"
-                                src="https://res.cloudinary.com/dwyufgknr/video/upload/v1761871423/ENGLISH_VIDEO_e7x5xz.mp4"
+                                className={`bg-neutral-900 rounded-lg ${language === "pt" ? "w-[900px]" : "w-[400px]"
+                                    } border border-neutral-600`}
+                                src={
+                                    language === "pt"
+                                        ? "https://res.cloudinary.com/dsgkc7epl/video/upload/v1761693312/28-10-25_v%C3%ADdeo_final_nfcfnb.mp4"
+                                        : "https://res.cloudinary.com/dwyufgknr/video/upload/v1761871423/ENGLISH_VIDEO_e7x5xz.mp4"
+                                }
                                 poster="./imagens/thumb2.png"
                                 controls
                                 playsInline
@@ -455,7 +509,7 @@ function Home() {
                             <div className='bg-neutral-700 relative rounded-[8px] p-2 mx-auto mt-5'>
                                 <div className='flex justify-center space-x-2 mt-0 relative'>
                                     <div className='w-full border border-neutral-500 rounded-[6px] relative overflow-hidden'>
-                                        <div className='relative w-full max-h-[380px] xl:max-h-[580px] bg-neutral-500 overflow-hidden flex justify-center items-center'>
+                                        <div className='relative w-full max-h-[420px] xl:max-h-[700px] bg-neutral-500 overflow-hidden flex justify-center items-center'>
                                             <span
                                                 onClick={prevSlide2}
                                                 className='z-20 left-1 bg-neutral-500 rounded p-[2px] absolute cursor-pointer buttonHover'
@@ -491,30 +545,30 @@ function Home() {
                         <div>
                             <div className='absolute left-0 text-left font-regular text-black p-3'>
                                 <div className='leading-[28px]'>
-                                    <p className='text-[21px]'>It’s not just</p>
-                                    <p className='text-[28px] font-psemibold'>a workout.</p>
+                                    <p className='text-[21px]'>{t.cardTitle1}</p>
+                                    <p className='text-[28px] font-psemibold'>{t.cardTitle2}</p>
                                 </div>
                                 <div className='mt-[120px] leading-[19px] text-[15.5px]'>
-                                    <p>It’s a <span className='font-psemibold'>real plan</span></p>
-                                    <p>that will <span className='font-psemibold'>change your life.</span></p>
+                                    <p>{t.cardText1} <span className='font-psemibold'>{t.cardText12}</span></p>
+                                    <p>{t.cardText2} <span className='font-psemibold'>{t.cardText22}</span></p>
                                 </div>
                             </div>
                             <div className='flex justify-center'>
                                 <div className='absolute z-10 bottom-0 space-y-3 text-[14px] leading-[19px] font-medium w-full p-3'>
                                     <div className='flex justify-center space-x-3 w-full'>
                                         <div className='w-[50%] h-[105px] p-3 rounded-[8px] bg-neutral-700/50 backdrop-blur-lg text-center flex items-center' style={{ WebkitBackdropFilter: 'blur(17px)' }}>
-                                            <p>100% personalized training for your routine and goals.</p>
+                                            <p>{t.cardText3}</p>
                                         </div>
                                         <div className='w-[50%] h-[105px] p-3 rounded-[8px] bg-neutral-700/50 backdrop-blur-lg text-center flex items-center' style={{ WebkitBackdropFilter: 'blur(7px)' }}>
-                                            <p>Practical nutrition tips based on your preferences.</p>
+                                            <p>{t.cardText4}</p>
                                         </div>
                                     </div>
                                     <div className='flex justify-center space-x-3'>
                                         <div className='w-[50%] h-[105px] p-3 rounded-[8px] bg-neutral-700/50 backdrop-blur-lg text-center flex items-center' style={{ WebkitBackdropFilter: 'blur(17px)' }}>
-                                            <p>App with videos, instructions, and monthly updates.</p>
+                                            <p>{t.cardText5}</p>
                                         </div>
                                         <div className='w-[50%] h-[105px] p-3 rounded-[8px] bg-neutral-700/50 backdrop-blur-lg text-center flex items-center' style={{ WebkitBackdropFilter: 'blur(17px)' }}>
-                                            <p>Direct follow-up with me via WhatsApp.</p>
+                                            <p>{t.cardText6}</p>
                                         </div>
                                     </div>
                                 </div>
