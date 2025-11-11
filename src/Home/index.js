@@ -117,7 +117,21 @@ const texts = {
         attention4:
             'You’ll be redirected to fill out your assessment form.',
         bestSeller: 'Best seller',
+        plan1: 'Annual',
+        plan2: 'Six Month',
+        plan3: 'Three month',
+        month: 'month',
         buyButton: 'I want this plan',
+        plantext1: 'Workout access app',
+        plantext2: 'Personalized training spreadsheet',
+        plantext3: 'Exercise videos',
+        plantext4: '8 workouts',
+        plantext42: 'updated every 45 days',
+        plantext43: '4 workouts',
+        plantext44: '2 workouts',
+        plantext5: 'Direct support with me via WhatsApp',
+        plantext6: 'Complete e-book according to your goal',
+        planWarning: 'For annual and six month plans, early cancellation is subject to a fee equivalent to one monthly payment.',
         myNameIs: 'My name is',
         brunodesc1: 'I’m a Personal Trainer with over',
         brunodesc12: '15 years of experience',
@@ -212,7 +226,21 @@ const texts = {
         attention4:
             'Você será redirecionado(a) para responder a anamnese.',
         bestSeller: 'Mais vendido',
+        plan1: 'Anual',
+        plan2: 'Semestral',
+        plan3: 'Trimestral',
+        month: 'mês',
         buyButton: 'Quero este plano',
+        plantext1: 'App de acesso aos treinos',
+        plantext2: 'Planilha personalizada de Treinos',
+        plantext3: 'Vídeos dos exercícios',
+        plantext4: '8 treinos',
+        plantext42: 'trocados a cada 45 dias',
+        plantext43: '4 treinos',
+        plantext44: '2 treinos',
+        plantext5: 'Suporte diretamente comigo via whatsapp',
+        plantext6: 'E-book completo de acordo com o seu objetivo',
+        planWarning: 'Em planos anual e semestral, o cancelamento antecipado está sujeito à taxa correspondente a uma mensalidade.',
         myNameIs: 'Meu nome é',
         brunodesc1: 'Sou Personal Trainer com mais de',
         brunodesc12: '15 anos de experiência',
@@ -654,10 +682,10 @@ function Home() {
                             <div className='border p-2 border-bgreen bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
                                 <div className='bg-bgreen rounded-[8px] p-2 space-y-2 text-black'>
                                     <div className='flex justify-between'>
-                                        <p className='text-[21px] font-medium pl-1'>Annual</p>
+                                        <p className='text-[21px] font-medium pl-1'>{t.plan1}</p>
                                         <p className='bg-neutral-700 text-white rounded-[6px] font-regular flex justify-center items-center h-[26px] px-2 text-[11px]'>{t.bestSeller}</p>
                                     </div>
-                                    <p className='font-medium text-[27px] text-left ml-1'>$30,90 <span className='text-[17px] font-regular'>/month</span></p>
+                                    <p className='font-medium text-[27px] text-left ml-1'>$30,90 <span className='text-[17px] font-regular'>/{t.month}</span></p>
                                     <div className='text-center pt-3 text-white'>
                                         <a
                                             href="https://buy.stripe.com/fZuaEWcbteG16LI5ogfQI0Q"
@@ -671,43 +699,43 @@ function Home() {
                                 <div className='space-y-2 p-3 text-neutral-200 text-left'>
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Workout access app</p>
+                                        <p className='leading-[20px]'>{t.plantext1}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Personalized training spreadsheet</p>
+                                        <p className='leading-[20px]'>{t.plantext2}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Exercise videos</p>
+                                        <p className='leading-[20px]'>{t.plantext3}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'><span className="font-medium text-white">8 workouts</span> updated every 45 days</p>
+                                        <p className='leading-[20px]'><span className="font-medium text-white">{t.plantext4}</span> {t.plantext42}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Direct support with me via WhatsApp</p>
+                                        <p className='leading-[20px]'>{t.plantext5}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Complete e-book according to your goal</p>
+                                        <p className='leading-[20px]'>{t.plantext6}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
-                                    <p className="font-extralight text-[12.5px] text-neutral-100 pb-1 text-center">Em planos anual e semestral, o cancelamento antecipado está sujeito à taxa correspondente a uma mensalidade.</p>
+                                    <p className="font-extralight text-[12.5px] text-neutral-100 pb-1 text-center">{t.planWarning}</p>
                                 </div>
                             </div>
                             <div className='p-2 bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
                                 <div className='bg-neutral-700 rounded-[8px] p-2 space-y-2'>
                                     <div className='flex justify-between'>
-                                        <p className='text-[21px] font-medium pl-1'>Six Month</p>
+                                        <p className='text-[21px] font-medium pl-1'>{t.plan2}</p>
                                     </div>
-                                    <p className='font-medium text-[27px] text-left ml-1'>$35,90 <span className='text-[17px] font-regular text-neutral-300'>/month</span></p>
+                                    <p className='font-medium text-[27px] text-left ml-1'>$35,90 <span className='text-[17px] font-regular text-neutral-300'>/{t.month}</span></p>
                                     <div className='text-center pt-3'>
                                         <a
                                             href="https://buy.stripe.com/4gMdR81wP9lH2vsdUMfQI0O"
@@ -721,43 +749,43 @@ function Home() {
                                 <div className='space-y-2 p-3 text-neutral-200 text-left'>
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>App de acesso aos treinos</p>
+                                        <p className='leading-[20px]'>{t.plantext1}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Planilha personalizada de Treinos</p>
+                                        <p className='leading-[20px]'>{t.plantext2}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Vídeos dos exercícios</p>
+                                        <p className='leading-[20px]'>{t.plantext3}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'><span className="font-medium text-white">4 treinos</span> trocados a cada 45 dias</p>
+                                        <p className='leading-[20px]'><span className="font-medium text-white">{t.plantext43}</span> {t.plantext42}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Suporte diretamente comigo via whatsapp.</p>
+                                        <p className='leading-[20px]'>{t.plantext5}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>E-book completo de acordo com o seu objetivo</p>
+                                        <p className='leading-[20px]'>{t.plantext6}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
+                                    <p className="font-extralight text-[12.5px] text-neutral-100 pb-1 text-center">{t.planWarning}</p>
                                 </div>
-                                <p className="font-extralight text-[12.5px] text-neutral-100 pb-1">Em planos anual e semestral, o cancelamento antecipado está sujeito à taxa correspondente a uma mensalidade.</p>
                             </div>
                             <div className='p-2 bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
                                 <div className='bg-neutral-700 rounded-[8px] p-2 space-y-2'>
                                     <div className='flex justify-between'>
-                                        <p className='text-[21px] font-medium pl-1'>Three month</p>
+                                        <p className='text-[21px] font-medium pl-1'>{t.plan3}</p>
                                     </div>
-                                    <p className='font-medium text-[27px] text-left ml-1'>$42,90 <span className='text-[17px] font-regular text-neutral-300'>/month</span></p>
+                                    <p className='font-medium text-[27px] text-left ml-1'>$42,90 <span className='text-[17px] font-regular text-neutral-300'>/{t.month}</span></p>
                                     <div className='text-center pt-3'>
                                         <a
                                             href="https://buy.stripe.com/8x2dR8b7p7dzeea6skfQI0R"
@@ -771,32 +799,32 @@ function Home() {
                                 <div className='space-y-2 p-3 text-neutral-200 text-left'>
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>App de acesso aos treinos</p>
+                                        <p className='leading-[20px]'>{t.plantext1}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Planilha personalizada de Treinos</p>
+                                        <p className='leading-[20px]'>{t.plantext2}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Vídeos dos exercícios</p>
+                                        <p className='leading-[20px]'>{t.plantext3}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>2 treinos trocados a cada 45 dias</p>
+                                        <p className='leading-[20px]'><span className="font-medium text-white">{t.plantext44}</span> {t.plantext42}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>Suporte diretamente comigo via whatsapp.</p>
+                                        <p className='leading-[20px]'>{t.plantext5}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
                                         <img className="w-[30px]" src="./imagens/close.png" alt=""/>
-                                        <p className='leading-[20px]'>E-book completo de acordo com o seu objetivo</p>
+                                        <p className='leading-[20px]'>{t.plantext6}</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                 </div>
