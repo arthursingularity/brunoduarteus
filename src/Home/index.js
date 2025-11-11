@@ -386,7 +386,7 @@ function Home() {
                                         ? "https://res.cloudinary.com/dsgkc7epl/video/upload/v1761693312/28-10-25_v%C3%ADdeo_final_nfcfnb.mp4"
                                         : "https://res.cloudinary.com/dwyufgknr/video/upload/v1761871423/ENGLISH_VIDEO_e7x5xz.mp4"
                                 }
-                                poster="./imagens/thumb2.png"
+                                poster={language === "pt" ? "./imagens/thumb.JPEG" : "./imagens/thumb2.png"}
                                 controls
                                 playsInline
                             />
