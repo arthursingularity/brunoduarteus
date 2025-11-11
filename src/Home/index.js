@@ -327,7 +327,7 @@ function Home() {
                     rel="noopener noreferrer"
                 >
                     <div className='buttonHover bg-green-500 rounded-full p-1.5 fixed z-50 bottom-2 right-2'>
-                        <img src='./imagens/whatsapp.svg' className='w-[40px]' />
+                        <img src='./imagens/whatsapp.svg' className='w-[40px]' alt=""/>
                     </div>
                 </a>
                 <div
@@ -374,7 +374,7 @@ function Home() {
                 <div className='text-white flex justify-center'>
                     <div className='text-center p-3 z-10 relative mt-2'>
                         <div className='flex justify-center left-[15px]'>
-                            <img src='./imagens/logo.png' className='w-[130px]' />
+                            <img src='./imagens/logo.png' className='w-[130px]' alt=""/>
                         </div>
                         <p className='text-[21px] font-psemibold mt-5'>{t.mainText1} <span className='text-bgreen'>{t.mainText2}</span>{t.mainText3}</p>
                         <div className='flex justify-center mt-7'>
@@ -407,37 +407,37 @@ function Home() {
                         <div className='flex justify-center max-w-[600px] mx-auto'>
                             <div className='mt-5 space-y-4 border border-neutral-700 p-4 rounded-[16px] text-white'>
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" />
+                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
                                     <p className='leading-[20px]'>{t.sectionTxt1} <span className='font-regular text-bgreen'>{t.sectionTxt12}</span> {t.sectionTxt13} <span className='font-regular text-bgreen'>{t.sectionTxt14}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" />
+                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
                                     <p className='leading-[20px]'>{t.sectionTxt2} <span className='font-regular text-bgreen'>{t.sectionTxt22} </span>{t.sectionTxt23} <span className='font-regular text-bgreen'>{t.sectionTxt24}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" />
+                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
                                     <p className='leading-[20px]'>{t.sectionTxt3} <span className='font-regular text-bgreen'>{t.sectionTxt32}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" />
+                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
                                     <p className='leading-[20px]'><span className='font-regular text-bgreen'>{t.sectionTxt4}</span>{t.sectionTxt42}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" />
+                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
                                     <p className='leading-[20px]'>{t.sectionTxt5} <span className='font-regular text-bgreen'>{t.sectionTxt52}</span> {t.sectionTxt53}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" />
+                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
                                     <p className='leading-[20px]'>{t.sectionTxt6} <span className='font-regular text-bgreen'>{t.sectionTxt62}</span>{t.sectionTxt63}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" />
+                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
                                     <p className='leading-[20px]'>{t.sectionTxt7} <span className='font-regular text-bgreen'>{t.sectionTxt72}</span></p>
                                 </div>
                             </div>
@@ -465,7 +465,7 @@ function Home() {
                                     onClick={prevSlide}
                                     className="absolute left-0 z-20 bg-neutral-600 ml-1.5 buttonHover text-white rounded p-0.5 mb-14 sm:mb-0"
                                 >
-                                    <img className="w-[25px]" src="./imagens/setaesq.png" />
+                                    <img className="w-[25px]" src="./imagens/setaesq.png" alt=""/>
                                 </button>
 
                                 {/* Imagens Antes e Depois */}
@@ -482,7 +482,7 @@ function Home() {
                                     onClick={nextSlide}
                                     className="absolute right-0 z-20 mr-1.5 bg-neutral-600 buttonHover text-white rounded p-0.5 mb-14 sm:mb-0"
                                 >
-                                    <img className="w-[25px]" src="./imagens/setadir.png" />
+                                    <img className="w-[25px]" src="./imagens/setadir.png" alt=""/>
                                 </button>
                             </div>
 
@@ -513,13 +513,13 @@ function Home() {
                                                 onClick={prevSlide2}
                                                 className='z-20 left-1 bg-neutral-500 rounded p-[2px] absolute cursor-pointer buttonHover'
                                             >
-                                                <img className="w-[25px]" src="./imagens/setaesq.png" />
+                                                <img className="w-[25px]" src="./imagens/setaesq.png" alt=""/>
                                             </span>
                                             <span
                                                 onClick={nextSlide2}
                                                 className='z-20 right-1 bg-neutral-500 rounded p-[2px] absolute cursor-pointer hover:brightness-90 transition'
                                             >
-                                                <img className="w-[25px]" src="./imagens/setadir.png" />
+                                                <img className="w-[25px]" src="./imagens/setadir.png" alt=""/>
                                             </span>
                                             <img
                                                 src='./imagens/logo.png'
@@ -572,7 +572,7 @@ function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <img src='./imagens/principal.png' className='absolute -right-[35px] w-[350px] mt-3' />
+                            <img src='./imagens/principal.png' className='absolute -right-[35px] w-[350px] mt-3' alt=""/>
                         </div>
                     </div>
 
@@ -670,32 +670,32 @@ function Home() {
                                 </div>
                                 <div className='space-y-2 p-3 text-neutral-200 text-left'>
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Workout access app</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Personalized training spreadsheet</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Exercise videos</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'><span className="font-medium text-white">8 workouts</span> updated every 45 days</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Direct support with me via WhatsApp</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Complete e-book according to your goal</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
@@ -720,32 +720,32 @@ function Home() {
                                 </div>
                                 <div className='space-y-2 p-3 text-neutral-200 text-left'>
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>App de acesso aos treinos</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Planilha personalizada de Treinos</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Vídeos dos exercícios</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'><span className="font-medium text-white">4 treinos</span> trocados a cada 45 dias</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Suporte diretamente comigo via whatsapp.</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>E-book completo de acordo com o seu objetivo</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
@@ -770,32 +770,32 @@ function Home() {
                                 </div>
                                 <div className='space-y-2 p-3 text-neutral-200 text-left'>
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>App de acesso aos treinos</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Planilha personalizada de Treinos</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Vídeos dos exercícios</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>2 treinos trocados a cada 45 dias</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" />
+                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
                                         <p className='leading-[20px]'>Suporte diretamente comigo via whatsapp.</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
                                     <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/close.png" />
+                                        <img className="w-[30px]" src="./imagens/close.png" alt=""/>
                                         <p className='leading-[20px]'>E-book completo de acordo com o seu objetivo</p>
                                     </div>
                                     <hr className='border-1 border-neutral-700' />
@@ -811,7 +811,7 @@ function Home() {
                             <div className='xl:flex xl:space-x-8 items-center'>
                                 <div className='flex justify-center'>
                                     <div className='rounded-[8px] border border-bgreen relative overflow-hidden flex justify-center items-center w-[300px] h-[400px]'>
-                                        <img src='./imagens/brunoduarte.jpg' className='absolute w-full object-cover scale-[110%] mt-[7px] mr-[30px]' />
+                                        <img src='./imagens/brunoduarte.jpg' className='absolute w-full object-cover scale-[110%] mt-[7px] mr-[30px]' alt=""/>
                                     </div>
                                 </div>
                                 <div className='xl:max-w-[600px] max-w-[400px]'>
@@ -826,14 +826,14 @@ function Home() {
                                     </div>
                                     <div className='flex space-x-3 mt-7 pb-5'>
                                         <a href="https://www.instagram.com/brunoduartepersonal" target="_blank" rel="noopener noreferrer">
-                                            <img src="./imagens/instagram.png" className="buttonHover w-[40px]" />
+                                            <img src="./imagens/instagram.png" className="buttonHover w-[40px]" alt=""/>
                                         </a>
                                         <a
                                             href="https://wa.me/553196450850?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20online."
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <img src="./imagens/whatsapp.png" className="buttonHover w-[40px]" />
+                                            <img src="./imagens/whatsapp.png" className="buttonHover w-[40px]" alt=""/>
                                         </a>
                                     </div>
                                 </div>
@@ -861,7 +861,7 @@ function Home() {
                 </div>
                 <div className='text-center text-white font-extralight space-y-5 p-6 bg-neutral-900'>
                     <div className='flex justify-center'>
-                        <img src='./imagens/logo.png' className='w-[100px]' />
+                        <img src='./imagens/logo.png' className='w-[100px]' alt=""/>
                     </div>
                     <p className='text-[15px]'>{t.footer}</p>
                     <hr className='border-1 border-neutral-700 max-w-[700px] mx-auto pb-4' />
