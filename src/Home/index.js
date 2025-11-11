@@ -147,7 +147,6 @@ const texts = {
         creatingPlanDesc: 'Based on your information, your plan will be built from scratch. You’ll receive your training and diet protocol within 5 business days.',
         Followup: 'Follow-up',
         FollowupDesc: 'Every week your plan will be reviewed. Adjustments will be made as needed — whether due to your feedback (difficulty, schedule change, etc.) or a strategy from me to speed up your progress.',
-        Followup: 'Follow-up',
     },
     pt: {
         changeLang: 'Mudar linguagem',
