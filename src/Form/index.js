@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
-function Formulario() {
+function Form() {
     const [step, setStep] = useState(1); // current step
     const totalSteps = 4;
 
@@ -193,4 +193,4 @@ function Formulario() {
     );
 }
 
-export default Formulario;
+export default Form;
