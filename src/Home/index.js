@@ -350,7 +350,7 @@ function Home() {
         <div>
             <div className='font-light'>
                 <a
-                    href="https://wa.me/553196450850?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20online."
+                    href="https://wa.me/553196450850?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20online%20consulting."
                     target="_blank"
                     rel="noopener noreferrer"
                 >
