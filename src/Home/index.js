@@ -61,7 +61,7 @@ const texts = {
             "more confident, secure, and happy",
         mainText3:
             ", inside and out.",
-        join: '💪 Join more than 300 students on this journey of health and self-esteem.',
+        join: '💪 Join more than 300 clients on this journey of health and self-esteem.',
         buttonMain: 'I want real results',
         section1: 'This is for you if...',
         sectionTxt1: 'Want to lose weight or get toned',
@@ -87,7 +87,7 @@ const texts = {
         wantSpot: 'I want a spot',
         realResults1: 'Real',
         realResults2: 'results',
-        realResults3: 'from my students',
+        realResults3: 'from my clients',
         transformBody: 'I want to transform my body',
         seriousWork: 'SERIOUS work,',
         works: 'a method that WORKS.',

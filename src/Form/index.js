@@ -25,6 +25,7 @@ function Form() {
         [
             "Where do you plan to train? (e.g.: gym, home with equipment, condo gym, etc.)",
             "If you answered home or condo gym above, what equipment do you have?",
+            "What's your favorite cardio machine? Treadmill, bike, elliptical… if another, please mention it.",
             "How many days per week can you train?",
             "How many hours per day can you train?",
             "Do you currently practice strength training?",
