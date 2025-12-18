@@ -4,11 +4,43 @@ import emailjs from "emailjs-com";
 function Form() {
     const [step, setStep] = useState(1); // current step
     const totalSteps = 4;
+    const RadioGroup = ({ label, options }) => (
+        <div className="flex flex-col space-y-2 mt-3">
+            <p>{label}</p>
+            <div className="flex flex-col space-y-2 pl-2">
+                {options.map((opt) => (
+                    <label
+                        key={opt}
+                        className="flex items-center gap-2 cursor-pointer hover:text-bgreen"
+                    >
+                        <input
+                            type="radio"
+                            name={label}
+                            value={opt}
+                            checked={answers[label] === opt}
+                            onChange={(e) => handleChange(label, e.target.value)}
+                            className="accent-bgreen cursor-pointer"
+                        />
+                        <span>{opt}</span>
+                    </label>
+                ))}
+            </div>
+        </div>
+    );
+
+    const femaleFields = [
+        "Do you have an active menstrual cycle?",
+        "Is your cycle usually:",
+        "Approximate date of your last menstruation:",
+        "During the menstrual or premenstrual period, you usually:",
+        "If you experience symptoms, do they interfere with your training?",
+    ];
 
     // Inputs separated by step
     const steps = [
         [
             "Full name",
+            "Gender",
             "Social media (e.g.: @bruno - Instagram)",
             "Email",
             "Phone number",
@@ -68,15 +100,22 @@ function Form() {
     const handleNext = () => {
         // Get fields from current step
         const currentStepFields = steps[step - 1];
-    
+
+        if (
+            step === 1 &&
+            answers["Gender"] === "Female"
+        ) {
+            currentStepFields = currentStepFields.concat(femaleFields);
+        }
+
         // Check for empty fields
         const hasEmptyField = currentStepFields.some(label => !answers[label] || answers[label].trim() === "");
-    
+
         if (hasEmptyField) {
             alert("Please fill in all required fields before continuing.");
             return; // don't proceed
         }
-    
+
         if (step < totalSteps) {
             setStep(step + 1);
         }
@@ -90,28 +129,28 @@ function Form() {
         // Ensure all fields are filled before submission
         const allFields = steps.flat();
         const hasEmptyField = allFields.some(label => !answers[label] || answers[label].trim() === "");
-    
+
         if (hasEmptyField) {
             alert("Please fill in all fields before submitting the form.");
             return;
         }
-    
+
         const nomeCompleto = answers["Full name"] || "No name";
         const message = Object.entries(answers)
             .map(([question, answer]) => `<b>${question}:</b> ${answer}<br><br>`)
             .join("");
-    
+
         const templateParams = {
             to_email: "brunoassispersonal@gmail.com",
             subject: `Online Coaching - Assessment from ${nomeCompleto}`,
             message: message,
             name: nomeCompleto,
         };
-    
+
         emailjs
             .send(
                 "service_6oz7wms",
-                "template_pqmznwk",
+                "template_qf8v6yq",
                 templateParams,
                 "NrYw_EiFWBGHgsaVH"
             )
@@ -123,7 +162,7 @@ function Form() {
                 console.error(err);
                 alert("An error occurred while sending.");
             });
-    };    
+    };
 
     const progressWidth = `${(step / totalSteps) * 100}%`;
 
@@ -154,13 +193,92 @@ function Form() {
                         {/* Inputs container */}
                         <div className="space-y-4">
                             {steps[step - 1].map((label, index) => (
-                                <div key={index} className="flex flex-col space-y-1">
+                                <div key={index} className="flex flex-col space-y-1 relative">
                                     <p>{label}</p>
-                                    <input
-                                        value={answers[label] || ""}
-                                        onChange={(e) => handleChange(label, e.target.value)}
-                                        className="bg-transparent border border-neutral-300 rounded h-[43px] caret-bgreen pl-2 outline-none hover:border-bgreen"
-                                    />
+
+                                    {/* GENDER SELECT */}
+                                    {label === "Gender" ? (
+                                        <>
+                                            <select
+                                                value={answers[label] || ""}
+                                                onChange={(e) => handleChange(label, e.target.value)}
+                                                className={`bg-transparent border rounded h-[43px] pl-2 pr-8 outline-none
+                                                            text-white appearance-none cursor-pointer
+                                                            border-neutral-300 hover:border-bgreen focus:border-bgreen`}
+                                            >
+                                                <option value="" disabled className="text-gray-400">
+                                                    Select
+                                                </option>
+                                                <option value="Male" className="text-black">Male</option>
+                                                <option value="Female" className="text-black">Female</option>
+                                                <option value="Other" className="text-black">Other</option>
+                                                <option value="Prefer not to say" className="text-black">
+                                                    Prefer not to say
+                                                </option>
+                                            </select>
+
+                                            {/* Custom arrow */}
+                                            <span className="pointer-events-none absolute right-3 top-[34px] text-bgreen">
+                                                ▼
+                                            </span>
+
+                                            {/* 🔥 FEMALE CONDITIONAL BLOCK */}
+                                            {answers["Gender"] === "Female" && (
+                                                <div className="mt-4 space-y-4 border-l border-bgreen pl-4">
+
+                                                    <RadioGroup
+                                                        label="Do you have an active menstrual cycle?"
+                                                        options={["Yes", "No"]}
+                                                    />
+
+                                                    <RadioGroup
+                                                        label="Is your cycle usually:"
+                                                        options={["Regular", "Irregular", "Not sure"]}
+                                                    />
+
+                                                    <div className="flex flex-col space-y-1">
+                                                        <p>Approximate date of your last menstruation:</p>
+                                                        <input
+                                                            value={answers["Approximate date of your last menstruation:"] || ""}
+                                                            onChange={(e) =>
+                                                                handleChange(
+                                                                    "Approximate date of your last menstruation:",
+                                                                    e.target.value
+                                                                )
+                                                            }
+                                                            placeholder="DD/MM/YYYY"
+                                                            inputMode="numeric"
+                                                            maxLength={10}
+                                                            className="bg-transparent border rounded h-[43px] caret-bgreen pl-2 outline-none
+                  border-neutral-300 hover:border-bgreen focus:border-bgreen"
+                                                        />
+                                                    </div>
+
+                                                    <RadioGroup
+                                                        label="During the menstrual or premenstrual period, you usually:"
+                                                        options={[
+                                                            "Maintain the same energy and strength",
+                                                            "Feel a drop in energy or strength",
+                                                            "Feel pain, cramps or other relevant symptoms",
+                                                        ]}
+                                                    />
+
+                                                    <RadioGroup
+                                                        label="If you experience symptoms, do they interfere with your training?"
+                                                        options={["No", "Slightly", "A lot"]}
+                                                    />
+                                                </div>
+                                            )}
+                                        </>
+                                    ) : (
+                                        /* DEFAULT INPUT */
+                                        <input
+                                            value={answers[label] || ""}
+                                            onChange={(e) => handleChange(label, e.target.value)}
+                                            className="bg-transparent border rounded h-[43px] caret-bgreen pl-2 outline-none
+          border-neutral-300 hover:border-bgreen focus:border-bgreen"
+                                        />
+                                    )}
                                 </div>
                             ))}
                         </div>
