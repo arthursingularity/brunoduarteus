@@ -98,24 +98,22 @@ function Form() {
     };
 
     const handleNext = () => {
-        // Get fields from current step
-        const currentStepFields = steps[step - 1];
-
-        if (
-            step === 1 &&
-            answers["Gender"] === "Female"
-        ) {
+        let currentStepFields = [...steps[step - 1]];
+    
+        // 👉 Só adiciona campos femininos NO STEP 1
+        if (step === 1 && answers["Gender"] === "Female") {
             currentStepFields = currentStepFields.concat(femaleFields);
         }
-
-        // Check for empty fields
-        const hasEmptyField = currentStepFields.some(label => !answers[label] || answers[label].trim() === "");
-
+    
+        const hasEmptyField = currentStepFields.some(
+            label => !answers[label] || answers[label].trim() === ""
+        );
+    
         if (hasEmptyField) {
             alert("Please fill in all required fields before continuing.");
-            return; // don't proceed
+            return;
         }
-
+    
         if (step < totalSteps) {
             setStep(step + 1);
         }
