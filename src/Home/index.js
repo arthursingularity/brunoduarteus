@@ -117,9 +117,9 @@ const texts = {
         attention4:
             'You’ll be redirected to fill out your assessment form.',
         bestSeller: 'Best seller',
-        plan1: 'Annual',
-        plan2: 'Six Month',
-        plan3: 'Three month',
+        plan1: 'Six Month',
+        plan2: 'Three Month',
+        plan3: 'Monthly',
         month: 'month',
         buyButton: 'I want this plan',
         plantext1: 'Workout access app',
@@ -226,9 +226,9 @@ const texts = {
         attention4:
             'Você será redirecionado(a) para responder a anamnese.',
         bestSeller: 'Mais vendido',
-        plan1: 'Anual',
-        plan2: 'Semestral',
-        plan3: 'Trimestral',
+        plan1: 'Semestral',
+        plan2: 'Trimestral',
+        plan3: 'Mensal',
         month: 'mês',
         buyButton: 'Quero este plano',
         plantext1: 'App de acesso aos treinos',
@@ -278,6 +278,9 @@ function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentIndex2, setCurrentIndex2] = useState(0);
     const [currentVideo, setCurrentVideo] = useState(0);
+    const [showSemestral, setShowSemestral] = useState(false);
+    const [showTrimestral, setShowTrimestral] = useState(false);
+    const [showMensal, setShowMensal] = useState(false);
     const touchStartX = useRef(null);
     const planosRef = useRef(null);
 
@@ -355,7 +358,7 @@ function Home() {
                     rel="noopener noreferrer"
                 >
                     <div className='buttonHover bg-green-500 rounded-full p-1.5 fixed z-50 bottom-2 right-2'>
-                        <img src='./imagens/whatsapp.svg' className='w-[40px]' alt=""/>
+                        <img src='./imagens/whatsapp.svg' className='w-[40px]' alt="" />
                     </div>
                 </a>
                 <div
@@ -402,7 +405,7 @@ function Home() {
                 <div className='text-white flex justify-center'>
                     <div className='text-center p-3 z-10 relative mt-2'>
                         <div className='flex justify-center left-[15px]'>
-                            <img src='./imagens/logo.png' className='w-[130px]' alt=""/>
+                            <img src='./imagens/logo.png' className='w-[130px]' alt="" />
                         </div>
                         <p className='text-[21px] font-psemibold mt-5'>{t.mainText1} <span className='text-bgreen'>{t.mainText2}</span>{t.mainText3}</p>
                         <div className='flex justify-center mt-7'>
@@ -435,37 +438,37 @@ function Home() {
                         <div className='flex justify-center max-w-[600px] mx-auto'>
                             <div className='mt-5 space-y-4 border border-neutral-700 p-4 rounded-[16px] text-white'>
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
+                                    <img className="w-[40px]" src="./imagens/check.png" alt="" />
                                     <p className='leading-[20px]'>{t.sectionTxt1} <span className='font-regular text-bgreen'>{t.sectionTxt12}</span> {t.sectionTxt13} <span className='font-regular text-bgreen'>{t.sectionTxt14}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
+                                    <img className="w-[40px]" src="./imagens/check.png" alt="" />
                                     <p className='leading-[20px]'>{t.sectionTxt2} <span className='font-regular text-bgreen'>{t.sectionTxt22} </span>{t.sectionTxt23} <span className='font-regular text-bgreen'>{t.sectionTxt24}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
+                                    <img className="w-[40px]" src="./imagens/check.png" alt="" />
                                     <p className='leading-[20px]'>{t.sectionTxt3} <span className='font-regular text-bgreen'>{t.sectionTxt32}</span></p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
+                                    <img className="w-[40px]" src="./imagens/check.png" alt="" />
                                     <p className='leading-[20px]'><span className='font-regular text-bgreen'>{t.sectionTxt4}</span>{t.sectionTxt42}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
+                                    <img className="w-[40px]" src="./imagens/check.png" alt="" />
                                     <p className='leading-[20px]'>{t.sectionTxt5} <span className='font-regular text-bgreen'>{t.sectionTxt52}</span> {t.sectionTxt53}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
+                                    <img className="w-[40px]" src="./imagens/check.png" alt="" />
                                     <p className='leading-[20px]'>{t.sectionTxt6} <span className='font-regular text-bgreen'>{t.sectionTxt62}</span>{t.sectionTxt63}</p>
                                 </div>
                                 <hr className='border-1 border-neutral-700' />
                                 <div className='flex items-center space-x-2'>
-                                    <img className="w-[40px]" src="./imagens/check.png" alt=""/>
+                                    <img className="w-[40px]" src="./imagens/check.png" alt="" />
                                     <p className='leading-[20px]'>{t.sectionTxt7} <span className='font-regular text-bgreen'>{t.sectionTxt72}</span></p>
                                 </div>
                             </div>
@@ -493,7 +496,7 @@ function Home() {
                                     onClick={prevSlide}
                                     className="absolute left-0 z-20 bg-neutral-600 ml-1.5 buttonHover text-white rounded p-0.5 mb-14 sm:mb-0"
                                 >
-                                    <img className="w-[25px]" src="./imagens/setaesq.png" alt=""/>
+                                    <img className="w-[25px]" src="./imagens/setaesq.png" alt="" />
                                 </button>
 
                                 {/* Imagens Antes e Depois */}
@@ -510,7 +513,7 @@ function Home() {
                                     onClick={nextSlide}
                                     className="absolute right-0 z-20 mr-1.5 bg-neutral-600 buttonHover text-white rounded p-0.5 mb-14 sm:mb-0"
                                 >
-                                    <img className="w-[25px]" src="./imagens/setadir.png" alt=""/>
+                                    <img className="w-[25px]" src="./imagens/setadir.png" alt="" />
                                 </button>
                             </div>
 
@@ -541,13 +544,13 @@ function Home() {
                                                 onClick={prevSlide2}
                                                 className='z-20 left-1 bg-neutral-500 rounded p-[2px] absolute cursor-pointer buttonHover'
                                             >
-                                                <img className="w-[25px]" src="./imagens/setaesq.png" alt=""/>
+                                                <img className="w-[25px]" src="./imagens/setaesq.png" alt="" />
                                             </span>
                                             <span
                                                 onClick={nextSlide2}
                                                 className='z-20 right-1 bg-neutral-500 rounded p-[2px] absolute cursor-pointer hover:brightness-90 transition'
                                             >
-                                                <img className="w-[25px]" src="./imagens/setadir.png" alt=""/>
+                                                <img className="w-[25px]" src="./imagens/setadir.png" alt="" />
                                             </span>
                                             <img
                                                 src='./imagens/logo.png'
@@ -600,7 +603,7 @@ function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <img src='./imagens/principal.png' className='absolute -right-[35px] w-[350px] mt-3' alt=""/>
+                            <img src='./imagens/principal.png' className='absolute -right-[35px] w-[350px] mt-3' alt="" />
                         </div>
                     </div>
 
@@ -670,176 +673,186 @@ function Home() {
                             </div>
                         </div>
                     </div>
-
-                    <div ref={planosRef} className="text-center relative">
-                        <p className='text-[30px] font-medium text-center pb-4'>{t.plans}</p>
-                        <hr className='border-1 border-neutral-700' />
-                        <p className="text-[18px] font-light mt-4 mb-4">
+                    <div ref={planosRef} className="text-center relative pt-10" id="planos">
+                        <p className='text-[30px] font-medium text-center pb-4 text-white'>{t.plans}</p>
+                        <p className="text-[15px] text-center text-neutral-300 max-w-[500px] mx-auto py-4 border-y border-neutral-800">
                             <span className="text-yellow-400 font-medium">{t.attention1}</span> {t.attention2} <span className="font-medium text-red-500">{t.attention3}</span> {t.attention4}
                         </p>
-                        <hr className='border-1 border-neutral-700' />
-                        <div className='space-y-4 mt-6 lg:flex lg:space-x-4 lg:justify-center lg:space-y-0'>
-                            <div className='border p-2 border-bgreen bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
-                                <div className='bg-bgreen rounded-[8px] p-2 space-y-2 text-black'>
-                                    <div className='flex justify-between'>
-                                        <p className='text-[21px] font-medium pl-1'>{t.plan1}</p>
-                                        <p className='bg-neutral-700 text-white rounded-[6px] font-regular flex justify-center items-center h-[26px] px-2 text-[11px]'>{t.bestSeller}</p>
+                        <div className='space-y-4 mt-8 lg:flex lg:items-start lg:gap-5 lg:justify-center lg:space-y-0'>
+                            
+                            {/* PLANO SEMESTRAL */}
+                            <div className='bg-[#191919E6] border border-white/5 rounded-[20px] overflow-hidden relative transition-all duration-400 ease hover:border-bgreen/15 hover:-translate-y-[6px] border-2 border-bgreen/40 shadow-[0_0_40px_rgba(170,255,0,0.08)] hover:shadow-[0_0_50px_rgba(170,255,0,0.15)] lg:w-[380px] max-w-[470px] mx-auto lg:mx-0' style={{ transitionDelay: '0.3s' }}>
+                                <div className='bg-gradient-to-br from-bgreen to-green-500 p-4 pt-3 space-y-6 text-black relative'>
+                                    <div className='flex justify-between items-center'>
+                                        <p className='text-[22px] font-psemibold'>{t.plan1}</p>
+                                        <span className='bg-black text-bgreen rounded-full px-3 py-1 text-[11px] font-psemibold tracking-wider uppercase'>
+                                            {language === 'pt' ? 'MELHOR PREÇO' : 'BEST PRICE'}
+                                        </span>
                                     </div>
-                                    <p className='font-medium text-[27px] text-left ml-1'>$30,90 <span className='text-[17px] font-regular'>/{t.month}</span></p>
-                                    <div className='text-center pt-3 text-white'>
-                                        <a
-                                            href="https://buy.stripe.com/fZuaEWcbteG16LI5ogfQI0Q"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <button className='buttonHover font-medium bg-neutral-600 p-3 w-full rounded-[6px] text-[18px] text-verde'>{t.buyButton}</button>
+                                    <div className='leading-[1.3] text-left'>
+                                        <p className='text-red-500 font-semibold line-through'>{language === 'pt' ? 'De $330' : 'From $330'}</p>
+                                        <div className='flex flex-col'>
+                                            <p className='font-bold text-[32px]'>$185,40<span className='text-[16px] font-medium opacity-80'>{language === 'pt' ? '(cartão de crédito)' : '(credit card)'}</span></p>
+                                            <div className='flex justify-between items-center'>
+                                                <p className='text-[19px] font-medium opacity-90'>{language === 'pt' ? 'ou 6x de' : 'or 6x of'} <span className='font-semibold text-black'>$30,90</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div onClick={() => setShowSemestral(!showSemestral)} className="absolute top-[118px] right-4 text-[11px] flex items-center gap-1 pl-3 pr-2 py-1 rounded-xl font-medium hover:opacity-100 transition-opacity bg-black text-white buttonHover cursor-pointer">
+                                        {showSemestral ? (language === 'pt' ? 'Ocultar benefícios' : 'Hide benefits') : (language === 'pt' ? 'Ver benefícios' : 'See benefits')}
+                                        <span className={`material-symbols-outlined !text-[13px] transition-all duration-400 ease ${showSemestral ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
+                                            arrow_forward_ios
+                                        </span>
+                                    </div>
+                                    <div className='flex flex-col space-y-4'>
+                                        <div className='flex flex-col space-y-2 relative w-full'>
+                                            <div className='flex items-center justify-center gap-1 bg-white border border-neutral-400/70 rounded-xl py-1 w-full'>
+                                                <span className="material-symbols-outlined !text-[23px]">
+                                                    redeem
+                                                </span>
+                                                <p className='text-[16px] font-bold'>{language === 'pt' ? 'Bônus: 1 mês grátis!' : 'Bonus: 1 free month!'}</p>
+                                            </div>
+                                        </div>
+                                        <div className=''>
+                                            <a href="https://buy.stripe.com/cNi4gy4J169vc625ogfQI1q" target="_blank" rel="noopener noreferrer">
+                                                <button className="hover:brightness-75 transition-all cursor-pointer font-psemibold bg-black text-bgreen p-3.5 w-full rounded-xl text-[17px]">
+                                                    {language === 'pt' ? 'QUERO ESSE PLANO →' : 'I WANT THIS PLAN →'}
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {showSemestral && (
+                                    <div className='details-card space-y-2.5 p-4 text-neutral-200 text-left text-[14px]'>
+                                        {[
+                                            t.plantext1,
+                                            t.plantext2,
+                                            t.plantext3,
+                                            <><span className="font-medium text-white">{t.plantext4}</span> {t.plantext42}</>,
+                                            t.plantext5,
+                                            t.plantext6,
+                                            <><span className="font-medium text-white">{language === 'pt' ? '1 mês grátis' : '1 free month'}</span></>
+                                        ].map((item, i) => (
+                                            <div key={i}>
+                                                <div className='flex items-center gap-2.5'>
+                                                    <img className="w-[26px] flex-shrink-0" src="./imagens/check.png" alt="" />
+                                                    <p className='leading-[20px]'>{item}</p>
+                                                </div>
+                                                {i < 6 && <hr className='border-neutral-800 mt-2.5' />}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* PLANO TRIMESTRAL */}
+                            <div className='relative bg-[#191919E6] border border-white/5 rounded-[20px] overflow-hidden transition-all duration-400 ease hover:border-bgreen/15 hover:-translate-y-[6px] lg:w-[380px] max-w-[470px] mx-auto lg:mx-0' style={{ transitionDelay: '0.15s' }}>
+                                <div className='bg-neutral-800 p-4 pt-3 space-y-7 text-left'>
+                                    <div className='flex justify-between items-center'>
+                                        <p className='text-[22px] font-psemibold text-bgreen'>{t.plan2}</p>
+                                    </div>
+                                    <div className='leading-[1.3] text-white'>
+                                        <p className='text-red-400 line-through font-medium'>{language === 'pt' ? 'De $165' : 'From $165'}</p>
+                                        <div className='flex flex-col gap-1'>
+                                            <p className='font-bold text-[32px]'>$107,70<span className='text-[14px] font-regular text-neutral-400'>{language === 'pt' ? '(cartão de crédito)' : '(credit card)'}</span></p>
+                                            <div className='flex justify-between items-center'>
+                                                <p className='text-[19px] font-medium text-neutral-300'>{language === 'pt' ? 'ou 3x de' : 'or 3x of'} <span className='font-semibold text-white'>$35,90</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div onClick={() => setShowTrimestral(!showTrimestral)} className="absolute top-[135px] right-[16px] text-[11px] flex items-center gap-1 pl-3 pr-2 py-1 rounded-xl font-medium hover:opacity-100 transition-opacity bg-white text-black buttonHover cursor-pointer">
+                                        {showTrimestral ? (language === 'pt' ? 'Ocultar benefícios' : 'Hide benefits') : (language === 'pt' ? 'Ver benefícios' : 'See benefits')}
+                                        <span className={`material-symbols-outlined !text-[13px] transition-all duration-400 ease ${showTrimestral ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
+                                            arrow_forward_ios
+                                        </span>
+                                    </div>
+                                    <div className='pt-3'>
+                                        <a href="https://buy.stripe.com/4gMdR81wP9lH2vsdUMfQI0O" target="_blank" rel="noopener noreferrer">
+                                            <button className="hover:brightness-75 transition-all cursor-pointer font-psemibold bg-bgreen text-black p-3.5 w-full rounded-xl text-[17px]">
+                                                {language === 'pt' ? 'QUERO ESSE PLANO →' : 'I WANT THIS PLAN →'}
+                                            </button>
                                         </a>
                                     </div>
                                 </div>
-                                <div className='space-y-2 p-3 text-neutral-200 text-left'>
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext1}</p>
+                                {showTrimestral && (
+                                    <div className='details-card space-y-2.5 p-4 text-neutral-200 text-left text-[14px]'>
+                                        {[
+                                            t.plantext1,
+                                            t.plantext2,
+                                            t.plantext3,
+                                            <><span className="font-medium text-white">{t.plantext43}</span> {t.plantext42}</>,
+                                            t.plantext5,
+                                            t.plantext6
+                                        ].map((item, i) => (
+                                            <div key={i}>
+                                                <div className='flex items-center gap-2.5'>
+                                                    <img className="w-[26px] flex-shrink-0" src="./imagens/check.png" alt="" />
+                                                    <p className='leading-[20px]'>{item}</p>
+                                                </div>
+                                                {i < 5 && <hr className='border-neutral-800 mt-2.5' />}
+                                            </div>
+                                        ))}
                                     </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext2}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext3}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'><span className="font-medium text-white">{t.plantext4}</span> {t.plantext42}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext5}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext6}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <p className="font-extralight text-[12.5px] text-neutral-100 pb-1 text-center">{t.planWarning}</p>
-                                </div>
+                                )}
                             </div>
-                            <div className='p-2 bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
-                                <div className='bg-neutral-700 rounded-[8px] p-2 space-y-2'>
-                                    <div className='flex justify-between'>
-                                        <p className='text-[21px] font-medium pl-1'>{t.plan2}</p>
+
+                            {/* PLANO MENSAL */}
+                            <div className='bg-[#191919E6] relative border border-white/5 rounded-[20px] overflow-hidden transition-all duration-400 ease hover:border-bgreen/15 hover:-translate-y-[6px] lg:w-[380px] max-w-[470px] mx-auto lg:mx-0' style={{ transitionDelay: '0s' }}>
+                                <div className='bg-neutral-800 p-4 pt-3 flex flex-col space-y-8 text-left'>
+                                    <div className='flex justify-between items-center'>
+                                        <p className='text-[22px] font-psemibold text-bgreen'>{t.plan3}</p>
                                     </div>
-                                    <p className='font-medium text-[27px] text-left ml-1'>$35,90 <span className='text-[17px] font-regular text-neutral-300'>/{t.month}</span></p>
-                                    <div className='text-center pt-3'>
-                                        <a
-                                            href="https://buy.stripe.com/4gMdR81wP9lH2vsdUMfQI0O"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <button className='buttonHover font-medium bg-verde text-black p-3 w-full rounded-[6px] text-[18px]'>{t.buyButton}</button>
+                                    <div className='flex justify-between items-center text-white'>
+                                        <div className='flex items-baseline gap-1'>
+                                            <p className='font-bold text-[32px]'>$42,90</p>
+                                            <span className='text-[16px] font-regular text-neutral-400'>/{language === 'pt' ? 'mês' : 'month'}</span>
+                                        </div>
+                                        <div onClick={() => setShowMensal(!showMensal)} className="absolute top-[119px] right-[16px] text-[11px] flex items-center gap-1 pl-3 pr-2 py-1 rounded-xl font-medium hover:opacity-100 transition-opacity bg-white text-black buttonHover cursor-pointer">
+                                            {showMensal ? (language === 'pt' ? 'Ocultar benefícios' : 'Hide benefits') : (language === 'pt' ? 'Ver benefícios' : 'See benefits')}
+                                            <span className={`material-symbols-outlined !text-[13px] transition-all duration-400 ease ${showMensal ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
+                                                arrow_forward_ios
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className='pt-1'>
+                                        <a href="https://buy.stripe.com/28E5kCb7p2Xj2vs2c4fQI1s" target="_blank" rel="noopener noreferrer">
+                                            <button className="hover:brightness-75 transition-all cursor-pointer font-psemibold bg-bgreen text-black p-3.5 w-full rounded-xl text-[17px] transition-all">
+                                                {language === 'pt' ? 'QUERO ESSE PLANO →' : 'I WANT THIS PLAN →'}
+                                            </button>
                                         </a>
                                     </div>
                                 </div>
-                                <div className='space-y-2 p-3 text-neutral-200 text-left'>
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext1}</p>
+                                {showMensal && (
+                                    <div className='details-card space-y-2.5 p-4 text-neutral-200 text-left text-[14px]'>
+                                        {[
+                                            t.plantext1,
+                                            t.plantext2,
+                                            t.plantext3,
+                                            <><span className="font-medium text-white">{t.plantext44}</span> {t.plantext42}</>,
+                                            t.plantext5,
+                                        ].map((item, i) => (
+                                            <div key={i}>
+                                                <div className='flex items-center gap-2.5'>
+                                                    <img className="w-[26px] flex-shrink-0" src="./imagens/check.png" alt="" />
+                                                    <p className='leading-[20px]'>{item}</p>
+                                                </div>
+                                                {i < 4 && <hr className='border-neutral-800 mt-2.5' />}
+                                            </div>
+                                        ))}
                                     </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext2}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext3}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'><span className="font-medium text-white">{t.plantext43}</span> {t.plantext42}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext5}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext6}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <p className="font-extralight text-[12.5px] text-neutral-100 pb-1 text-center">{t.planWarning}</p>
-                                </div>
+                                )}
                             </div>
-                            <div className='p-2 bg-neutral-800 rounded-[16px] text-center overflow-hidden lg:w-[370px] max-w-[470px] mx-auto lg:mx-0'>
-                                <div className='bg-neutral-700 rounded-[8px] p-2 space-y-2'>
-                                    <div className='flex justify-between'>
-                                        <p className='text-[21px] font-medium pl-1'>{t.plan3}</p>
-                                    </div>
-                                    <p className='font-medium text-[27px] text-left ml-1'>$42,90 <span className='text-[17px] font-regular text-neutral-300'>/{t.month}</span></p>
-                                    <div className='text-center pt-3'>
-                                        <a
-                                            href="https://buy.stripe.com/8x2dR8b7p7dzeea6skfQI0R"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <button className='buttonHover font-medium bg-verde text-black p-3 w-full rounded-[6px] text-[18px]'>{t.buyButton}</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className='space-y-2 p-3 text-neutral-200 text-left'>
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext1}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext2}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext3}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'><span className="font-medium text-white">{t.plantext44}</span> {t.plantext42}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/check.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext5}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                    <div className='flex items-center space-x-2'>
-                                        <img className="w-[30px]" src="./imagens/close.png" alt=""/>
-                                        <p className='leading-[20px]'>{t.plantext6}</p>
-                                    </div>
-                                    <hr className='border-1 border-neutral-700' />
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
-
                 <div className='p-7 xl:py-10 bg-neutral-900 text-white mt-6'>
                     <div className='space-y-5 mt-5 xl:mt-0'>
                         <div className='flex justify-center'>
                             <div className='xl:flex xl:space-x-8 items-center'>
                                 <div className='flex justify-center'>
                                     <div className='rounded-[8px] border border-bgreen relative overflow-hidden flex justify-center items-center w-[300px] h-[400px]'>
-                                        <img src='./imagens/brunoduarte.jpg' className='absolute w-full object-cover scale-[110%] mt-[7px] mr-[30px]' alt=""/>
+                                        <img src='./imagens/brunoduarte.jpg' className='absolute w-full object-cover scale-[110%] mt-[7px] mr-[30px]' alt="" />
                                     </div>
                                 </div>
                                 <div className='xl:max-w-[600px] max-w-[400px]'>
@@ -854,14 +867,14 @@ function Home() {
                                     </div>
                                     <div className='flex space-x-3 mt-7 pb-5'>
                                         <a href="https://www.instagram.com/brunoduartepersonal" target="_blank" rel="noopener noreferrer">
-                                            <img src="./imagens/instagram.png" className="buttonHover w-[40px]" alt=""/>
+                                            <img src="./imagens/instagram.png" className="buttonHover w-[40px]" alt="" />
                                         </a>
                                         <a
                                             href="https://wa.me/553196450850?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20online."
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <img src="./imagens/whatsapp.png" className="buttonHover w-[40px]" alt=""/>
+                                            <img src="./imagens/whatsapp.png" className="buttonHover w-[40px]" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -889,7 +902,7 @@ function Home() {
                 </div>
                 <div className='text-center text-white font-extralight space-y-5 p-6 bg-neutral-900'>
                     <div className='flex justify-center'>
-                        <img src='./imagens/logo.png' className='w-[100px]' alt=""/>
+                        <img src='./imagens/logo.png' className='w-[100px]' alt="" />
                     </div>
                     <p className='text-[15px]'>{t.footer}</p>
                     <hr className='border-1 border-neutral-700 max-w-[700px] mx-auto pb-4' />

@@ -52,3 +52,170 @@ body {
   filter: brightness(80%);
   cursor: pointer;
 }
+
+/* ===== CTA Button ===== */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #aaff00, #88dd00);
+  color: #000;
+  font-family: 'Poppins SemiBold', sans-serif;
+  font-size: 17px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px rgba(170, 255, 0, 0.15);
+}
+.cta-button:hover {
+  filter: brightness(0.9);
+  transform: scale(1.02);
+}
+
+/* ===== Glass Card ===== */
+.glass-card {
+  background: rgba(25, 25, 25, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+.glass-card:hover {
+  border-color: rgba(170, 255, 0, 0.1);
+}
+
+/* ===== Step Circle ===== */
+.step-circle {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  background: linear-gradient(135deg, #aaff00, #88dd00);
+  color: #000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins SemiBold', sans-serif;
+  font-size: 18px;
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(170, 255, 0, 0.2), transparent);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== Text Glow ===== */
+.text-glow {
+  text-shadow: 0 0 30px rgba(170, 255, 0, 0.3);
+}
+
+/* ===== Scroll Reveal Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== Urgency Section ===== */
+.urgency-section {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  position: relative;
+  overflow: hidden;
+}
+.urgency-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.08), transparent 60%);
+}
+
+/* ===== Details Card (Planos benefits) ===== */
+.details-card {
+  animation: slideDown 0.3s ease;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FAQ ===== */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.faq-answer.open {
+  max-height: 300px;
+  padding-top: 0;
+  padding-bottom: 18px;
+}
+.faq-icon.open {
+  transform: rotate(45deg);
+}
+
+/* ===== Fade In Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+.animate-fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
