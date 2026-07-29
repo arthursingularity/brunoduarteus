@@ -694,7 +694,7 @@ function Home() {
                                         <div className='flex flex-col'>
                                             <p className='font-bold text-[32px]'>$180<span className='text-[16px] font-medium opacity-80'>{language === 'pt' ? '(cartão de crédito)' : '(credit card)'}</span></p>
                                             <div className='flex justify-between items-center'>
-                                                <p className='text-[19px] font-medium opacity-90'>{language === 'pt' ? 'ou 6x de' : 'or 6x of'} <span className='font-semibold text-black'>$30,90</span></p>
+                                                <p className='text-[19px] font-medium opacity-90'>{language === 'pt' ? 'ou 6x de' : 'or 6x of'} <span className='font-semibold text-black'>$30</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -714,7 +714,7 @@ function Home() {
                                             </div>
                                         </div>
                                         <div className=''>
-                                            <a href="https://buy.stripe.com/8x29AScbt8hDda603WfQI1w" target="_blank" rel="noopener noreferrer">
+                                            <a href="https://buy.stripe.com/bJe9AS8ZheG15HEbMEfQI1v" target="_blank" rel="noopener noreferrer">
                                                 <button className="hover:brightness-75 transition-all cursor-pointer font-psemibold bg-black text-bgreen p-3.5 w-full rounded-xl text-[17px]">
                                                     {language === 'pt' ? 'QUERO ESSE PLANO →' : 'I WANT THIS PLAN →'}
                                                 </button>
@@ -756,7 +756,7 @@ function Home() {
                                         <div className='flex flex-col gap-1'>
                                             <p className='font-bold text-[32px]'>$120<span className='text-[14px] font-regular text-neutral-400'>{language === 'pt' ? '(cartão de crédito)' : '(credit card)'}</span></p>
                                             <div className='flex justify-between items-center'>
-                                                <p className='text-[19px] font-medium text-neutral-300'>{language === 'pt' ? 'ou 3x de' : 'or 3x of'} <span className='font-semibold text-white'>$35,90</span></p>
+                                                <p className='text-[19px] font-medium text-neutral-300'>{language === 'pt' ? 'ou 3x de' : 'or 3x of'} <span className='font-semibold text-white'>$40</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -804,7 +804,7 @@ function Home() {
                                     </div>
                                     <div className='flex justify-between items-center text-white'>
                                         <div className='flex items-baseline gap-1'>
-                                            <p className='font-bold text-[32px]'>$42,90</p>
+                                            <p className='font-bold text-[32px]'>$55</p>
                                             <span className='text-[16px] font-regular text-neutral-400'>/{language === 'pt' ? 'mês' : 'month'}</span>
                                         </div>
                                         <div onClick={() => setShowMensal(!showMensal)} className="absolute top-[119px] right-[16px] text-[11px] flex items-center gap-1 pl-3 pr-2 py-1 rounded-xl font-medium hover:opacity-100 transition-opacity bg-white text-black buttonHover cursor-pointer">
