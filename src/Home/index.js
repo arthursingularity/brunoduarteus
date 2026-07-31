@@ -284,6 +284,10 @@ function Home() {
     const touchStartX = useRef(null);
     const planosRef = useRef(null);
 
+    useEffect(() => {
+        document.documentElement.lang = language;
+    }, [language]);
+
     const t = texts[language];
 
     const scrollToPlanos = () => {
@@ -679,7 +683,7 @@ function Home() {
                             <span className="text-yellow-400 font-medium">{t.attention1}</span> {t.attention2} <span className="font-medium text-red-500">{t.attention3}</span> {t.attention4}
                         </p>
                         <div className='space-y-4 mt-8 lg:flex lg:items-start lg:gap-5 lg:justify-center lg:space-y-0'>
-                            
+
                             {/* PLANO SEMESTRAL */}
                             <div className='bg-[#191919E6] border border-white/5 rounded-[20px] overflow-hidden relative transition-all duration-400 ease hover:border-bgreen/15 hover:-translate-y-[6px] border-2 border-bgreen/40 shadow-[0_0_40px_rgba(170,255,0,0.08)] hover:shadow-[0_0_50px_rgba(170,255,0,0.15)] lg:w-[380px] max-w-[470px] mx-auto lg:mx-0' style={{ transitionDelay: '0.3s' }}>
                                 <div className='bg-gradient-to-br from-bgreen to-green-500 p-4 pt-3 space-y-6 text-black relative'>
@@ -700,14 +704,14 @@ function Home() {
                                     </div>
                                     <div onClick={() => setShowSemestral(!showSemestral)} className="absolute top-[118px] right-4 text-[11px] flex items-center gap-1 pl-3 pr-2 py-1 rounded-xl font-medium hover:opacity-100 transition-opacity bg-black text-white buttonHover cursor-pointer">
                                         {showSemestral ? (language === 'pt' ? 'Ocultar benefícios' : 'Hide benefits') : (language === 'pt' ? 'Ver benefícios' : 'See benefits')}
-                                        <span className={`material-symbols-outlined !text-[13px] transition-all duration-400 ease ${showSemestral ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
+                                        <span className={`material-symbols-outlined notranslate !text-[13px] transition-all duration-400 ease ${showSemestral ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
                                             arrow_forward_ios
                                         </span>
                                     </div>
                                     <div className='flex flex-col space-y-4'>
                                         <div className='flex flex-col space-y-2 relative w-full'>
                                             <div className='flex items-center justify-center gap-1 bg-white border border-neutral-400/70 rounded-xl py-1 w-full'>
-                                                <span className="material-symbols-outlined !text-[23px]">
+                                                <span className="material-symbols-outlined notranslate !text-[23px]" translate="no">
                                                     redeem
                                                 </span>
                                                 <p className='text-[16px] font-bold'>{language === 'pt' ? 'Bônus: 1 mês grátis!' : 'Bonus: 1 free month!'}</p>
@@ -723,7 +727,7 @@ function Home() {
                                     </div>
                                 </div>
                                 {showSemestral && (
-                                    <div className='details-card space-y-2.5 p-4 text-neutral-200 text-left text-[14px]'>
+                                    <div key={language} className='details-card space-y-2.5 p-4 text-neutral-200 text-left text-[14px]'>
                                         {[
                                             t.plantext1,
                                             t.plantext2,
@@ -762,12 +766,12 @@ function Home() {
                                     </div>
                                     <div onClick={() => setShowTrimestral(!showTrimestral)} className="absolute top-[135px] right-[16px] text-[11px] flex items-center gap-1 pl-3 pr-2 py-1 rounded-xl font-medium hover:opacity-100 transition-opacity bg-white text-black buttonHover cursor-pointer">
                                         {showTrimestral ? (language === 'pt' ? 'Ocultar benefícios' : 'Hide benefits') : (language === 'pt' ? 'Ver benefícios' : 'See benefits')}
-                                        <span className={`material-symbols-outlined !text-[13px] transition-all duration-400 ease ${showTrimestral ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
+                                        <span className={`material-symbols-outlined notranslate !text-[13px] transition-all duration-400 ease ${showTrimestral ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
                                             arrow_forward_ios
                                         </span>
                                     </div>
                                     <div className='pt-3'>
-                                        <a href="https://buy.stripe.com/4gMdR81wP9lH2vsdUMfQI0O" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://buy.stripe.com/8x200icbt7dz2vs03WfQI1D" target="_blank" rel="noopener noreferrer">
                                             <button className="hover:brightness-75 transition-all cursor-pointer font-psemibold bg-bgreen text-black p-3.5 w-full rounded-xl text-[17px]">
                                                 {language === 'pt' ? 'QUERO ESSE PLANO →' : 'I WANT THIS PLAN →'}
                                             </button>
@@ -809,7 +813,7 @@ function Home() {
                                         </div>
                                         <div onClick={() => setShowMensal(!showMensal)} className="absolute top-[119px] right-[16px] text-[11px] flex items-center gap-1 pl-3 pr-2 py-1 rounded-xl font-medium hover:opacity-100 transition-opacity bg-white text-black buttonHover cursor-pointer">
                                             {showMensal ? (language === 'pt' ? 'Ocultar benefícios' : 'Hide benefits') : (language === 'pt' ? 'Ver benefícios' : 'See benefits')}
-                                            <span className={`material-symbols-outlined !text-[13px] transition-all duration-400 ease ${showMensal ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
+                                            <span className={`material-symbols-outlined notranslate !text-[13px] transition-all duration-400 ease ${showMensal ? 'rotate-[-90deg]' : 'rotate-[90deg]'}`}>
                                                 arrow_forward_ios
                                             </span>
                                         </div>
