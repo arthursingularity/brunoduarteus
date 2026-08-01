@@ -718,7 +718,7 @@ function Home() {
                                             </div>
                                         </div>
                                         <div className=''>
-                                            <a href="https://buy.stripe.com/bJe9AS8ZheG15HEbMEfQI1v" target="_blank" rel="noopener noreferrer">
+                                            <a href="https://buy.stripe.com/9B64gyejB1Tfgmi180fQI1E" target="_blank" rel="noopener noreferrer">
                                                 <button className="hover:brightness-75 transition-all cursor-pointer font-psemibold bg-black text-bgreen p-3.5 w-full rounded-xl text-[17px]">
                                                     {language === 'pt' ? 'QUERO ESSE PLANO →' : 'I WANT THIS PLAN →'}
                                                 </button>
